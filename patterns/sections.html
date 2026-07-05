@@ -1,0 +1,31 @@
+<!-- emily-components: sections & split layout
+     .section / .section-sm / .section-lg control vertical rhythm.
+     .split = asymmetric two-column, collapses under 768px. -->
+
+<section class="section">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold">Section heading</h2>
+    <p class="text-neutral-60 content-wide">Section intro copy.</p>
+  </div>
+</section>
+
+<!-- Split: content + supporting panel -->
+<section class="section">
+  <div class="width-container">
+    <div class="split">
+      <div class="stack">
+        <h2 class="text-3xl font-semibold">Why choose us</h2>
+        <p class="text-neutral-60">Lead paragraph explaining your main differentiator.</p>
+        <ul class="stack-sm pl-6 list-disc text-neutral-80">
+          <li>Concrete proof point one</li>
+          <li>Concrete proof point two</li>
+          <li>Concrete proof point three</li>
+        </ul>
+      </div>
+      <aside class="card stack-sm">
+        <h3 class="text-xl font-semibold">At a glance</h3>
+        <p class="text-neutral-60">Stats, accreditations, or a photo go here.</p>
+      </aside>
+    </div>
+  </div>
+</section>

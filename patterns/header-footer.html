@@ -1,0 +1,37 @@
+<!-- emily-components: header & footer
+     Skip link first in body. nav landmarks labelled. aria-current on active page. -->
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="py-4 border-b border-neutral-20">
+  <div class="width-container cluster-between">
+    <a class="text-xl font-bold text-neutral-90 no-underline" href="/">Business Name</a>
+    <nav aria-label="Main">
+      <ul class="inline-list">
+        <li><a class="text-neutral-80" href="/services">Services</a></li>
+        <li><a class="text-neutral-80" href="/about">About</a></li>
+        <li><a class="text-neutral-80" href="/work">Recent work</a></li>
+        <li><a class="btn btn-primary btn-sm" href="/contact">Get a quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- page content -->
+</main>
+
+<footer class="section-sm bg-neutral-10 border-t border-neutral-20">
+  <div class="width-container stack">
+    <div class="cluster-between">
+      <p class="font-semibold text-neutral-90">Business Name</p>
+      <nav aria-label="Footer">
+        <ul class="inline-list">
+          <li><a class="text-neutral-80" href="/privacy">Privacy</a></li>
+          <li><a class="text-neutral-80" href="/accessibility">Accessibility</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="text-sm text-neutral-60">Street address · Phone number · Opening hours</p>
+  </div>
+</footer>
