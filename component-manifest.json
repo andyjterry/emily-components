@@ -3467,7 +3467,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Static review passed: native details/summary, no ARIA, keyboard native, names from summary text. Stays needs-a11y-review only for one manual AT pass over a grouped set (announcement quality across many items) — no markup changes expected.",
+      "accessibilityNotes": "Static review passed: native details/summary, no ARIA, keyboard native, names from summary text. Stays needs-a11y-review pending the manual AT test in docs/accessibility/faq-accordion-manual-test.md — no markup changes expected.",
       "filePath": "",
       "examplesPath": "emily-components/organisms/informational.html"
     },
@@ -3835,7 +3835,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Static review passed; inherits the FAQ accordion's single remaining manual AT check. No markup changes expected.",
+      "accessibilityNotes": "Static review passed; gated on the same manual AT test as the FAQ accordion: docs/accessibility/faq-accordion-manual-test.md.",
       "filePath": "",
       "examplesPath": "emily-components/templates/content-pages.html"
     },
