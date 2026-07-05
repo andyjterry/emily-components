@@ -14,8 +14,8 @@ tokens / ions → manifest → atoms → molecules → organisms → templates �
 
 - **Tokens** already exist in `emily-css` (colour scales, semantic roles, spacing, type, focus ring).
 - **`component-manifest.json`** is the exhaustive map of the whole system — every layer, every planned component. The manifest is the source of truth for what exists and what is blocked; it is *not* the implementation scope. Implementation is phased.
-- **Atoms** (`atoms/`) are the current build priority — built.
-- **Molecules** depend on atoms — next.
+- **Atoms** (`atoms/`) — built.
+- **Molecules** (`molecules/`) — built where no JS/a11y-review blocker exists.
 - **Organisms** depend on molecules.
 - **Templates, pages and starters** come after that.
 - The browsable **catalogue** comes last.
@@ -74,6 +74,18 @@ Override any role by declaring the same name in `semanticColours` in `emily.conf
 | `atoms/layout-primitives.html` | Container, section, stack, cluster, grid, sidebar, split, divider, scroll area, sr-only, skip link, focus ring |
 
 Atoms not yet buildable are tracked in the manifest as `needs-css`, `needs-js`, or `deferred` with reasons.
+
+## Molecules
+
+`molecules/` composes atoms into small reusable units.
+
+| File | Contents |
+|---|---|
+| `molecules/forms.html` | Form field, required/optional markers, fieldset, radio/checkbox groups, consent, search bar, validation summary, submit row |
+| `molecules/cards.html` | Basic/image/service/feature/case-study/blog/testimonial cards, stat block, price tag, byline, contact method, download item |
+| `molecules/content.html` | Alert variants, process step, FAQ item (details/summary), breadcrumb, pagination, share links, related link |
+
+Still blocked: toggle row (`needs-css`), tab item/cookie banner/back-to-top/upload previews (`needs-js`), accordion/rating stars/multi-step progress (`needs-a11y-review`), review card (blocked on rating stars).
 
 ## Patterns
 

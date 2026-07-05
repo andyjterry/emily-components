@@ -1,0 +1,74 @@
+<!-- emily-components/molecules: content
+     Alerts, process steps, FAQ items, navigation trails, share links.
+     No JavaScript anywhere in this file: FAQ items use native details/summary.
+     Not built at this layer: tab item, cookie banner, back-to-top (needs-js);
+     accordion item, rating stars, multi-step progress (needs-a11y-review);
+     review card (blocked on rating stars). -->
+
+<!-- Alerts: bold status word leads, so meaning survives without colour.
+     Static page messages need no role. role="alert" only for injected interruptions. -->
+<div class="alert alert-success">
+  <p><strong>Success:</strong> Your enquiry has been sent.</p>
+</div>
+<div class="alert alert-warning">
+  <p><strong>Warning:</strong> We are fully booked this week — response may take longer.</p>
+</div>
+<div class="alert alert-error">
+  <p><strong>Error:</strong> Your message could not be sent. Try again or call us.</p>
+</div>
+<div class="alert alert-info">
+  <p><strong>Note:</strong> Prices shown include materials and labour.</p>
+</div>
+
+<!-- Alert with action -->
+<div class="alert alert-warning">
+  <p><strong>Warning:</strong> Your session is about to expire.</p>
+  <p><a class="btn btn-secondary btn-sm" href="/renew">Stay signed in</a></p>
+</div>
+
+<!-- Process step: number is decorative, heading carries the order -->
+<div class="media-object">
+  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-80 text-light font-bold" aria-hidden="true">1</span>
+  <div class="stack-sm">
+    <h3 class="text-xl font-semibold">Step one: tell us about the job</h3>
+    <p class="text-neutral-60">What happens in this step and what the customer needs to do.</p>
+  </div>
+</div>
+
+<!-- FAQ item: native details/summary — keyboard and AT support for free -->
+<details class="card">
+  <summary class="text-lg font-semibold cursor-pointer">How soon can you start?</summary>
+  <p class="text-neutral-60" style="margin-top: 0.75rem">Answer in plain language, two or three sentences at most.</p>
+</details>
+
+<!-- Breadcrumb trail: separators are decorative, current page is not a link -->
+<nav aria-label="Breadcrumb">
+  <ol class="inline-list text-sm">
+    <li><a class="text-neutral-80" href="/">Home</a> <span class="text-neutral-60" aria-hidden="true">/</span></li>
+    <li><a class="text-neutral-80" href="/services">Services</a> <span class="text-neutral-60" aria-hidden="true">/</span></li>
+    <li><span class="text-neutral-90 font-semibold" aria-current="page">Boiler repairs</span></li>
+  </ol>
+</nav>
+
+<!-- Pagination: landmark + labelled links, current page marked -->
+<nav aria-label="Pagination">
+  <ul class="inline-list">
+    <li><a class="btn btn-ghost btn-sm" href="?page=1">Previous<span class="sr-only"> page</span></a></li>
+    <li><a class="btn btn-ghost btn-sm" href="?page=1">1</a></li>
+    <li><span class="btn btn-secondary btn-sm" aria-current="page">2</span></li>
+    <li><a class="btn btn-ghost btn-sm" href="?page=3">3</a></li>
+    <li><a class="btn btn-ghost btn-sm" href="?page=3">Next<span class="sr-only"> page</span></a></li>
+  </ul>
+</nav>
+
+<!-- Social share links: plain hrefs, no tracking scripts -->
+<ul class="inline-list" aria-label="Share this page">
+  <li><a class="btn btn-ghost btn-sm" href="https://www.facebook.com/sharer/sharer.php?u=PAGE_URL" rel="noopener">Share on Facebook</a></li>
+  <li><a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/sharing/share-offsite/?url=PAGE_URL" rel="noopener">Share on LinkedIn</a></li>
+  <li><a class="btn btn-ghost btn-sm" href="mailto:?subject=PAGE_TITLE&amp;body=PAGE_URL">Share by email</a></li>
+</ul>
+
+<!-- Related link item -->
+<p>
+  <a class="text-brand-80 font-semibold no-underline" href="/services/related">Related service name <span aria-hidden="true">→</span></a>
+</p>

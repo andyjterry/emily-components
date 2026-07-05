@@ -1,0 +1,96 @@
+<!-- emily-components/molecules: forms
+     Compositions of input/button/feedback atoms. All molecules here are plain HTML —
+     no JavaScript. Labels always associated; hints/errors linked via aria-describedby.
+     Not built at this layer: toggle row (needs-css: switch atom), address lookup row,
+     file/image upload with preview (needs-js), multi-step progress (needs-a11y-review). -->
+
+<!-- Form field: label + hint + input + error (the canonical field molecule) -->
+<div class="field-container">
+  <label for="mf-email">Email address</label>
+  <p class="form-hint" id="mf-email-hint">We only use this to reply to you.</p>
+  <input class="input" id="mf-email" name="email" type="email" autocomplete="email"
+         aria-invalid="true" aria-describedby="mf-email-hint mf-email-error" required>
+  <span class="inline-error" id="mf-email-error">Enter an email address in the correct format</span>
+</div>
+
+<!-- Required field marker: mark the exception, state the rule up front -->
+<p class="text-sm text-neutral-60">All fields are required unless marked optional.</p>
+<div class="field-container">
+  <label for="mf-name">Full name</label>
+  <input class="input" id="mf-name" name="name" type="text" autocomplete="name" required>
+</div>
+
+<!-- Optional field marker: in the label, not an asterisk -->
+<div class="field-container">
+  <label for="mf-phone">Phone number <span class="text-neutral-60 font-normal">(optional)</span></label>
+  <input class="input" id="mf-phone" name="phone" type="tel" autocomplete="tel">
+</div>
+
+<!-- Fieldset with legend
+     Note: enhanced fieldset/legend styling requires formBase: true in emily.config.json -->
+<fieldset>
+  <legend>Your details</legend>
+  <div class="field-container">
+    <label for="mf-fs-name">Full name</label>
+    <input class="input" id="mf-fs-name" name="name" type="text" autocomplete="name">
+  </div>
+</fieldset>
+
+<!-- Radio group: fieldset + legend names the question; one name, one choice -->
+<fieldset>
+  <legend>How would you like us to contact you?</legend>
+  <div class="radio-group">
+    <input class="radio" id="mf-contact-email" name="contact-method" type="radio" value="email" checked>
+    <label for="mf-contact-email">Email</label>
+  </div>
+  <div class="radio-group">
+    <input class="radio" id="mf-contact-phone" name="contact-method" type="radio" value="phone">
+    <label for="mf-contact-phone">Phone</label>
+  </div>
+  <div class="radio-group">
+    <input class="radio" id="mf-contact-either" name="contact-method" type="radio" value="either">
+    <label for="mf-contact-either">Either</label>
+  </div>
+</fieldset>
+
+<!-- Checkbox group -->
+<fieldset>
+  <legend>Which services are you interested in?</legend>
+  <div class="checkbox-group">
+    <input class="checkbox" id="mf-svc-a" name="services" type="checkbox" value="a">
+    <label for="mf-svc-a">Service A</label>
+  </div>
+  <div class="checkbox-group">
+    <input class="checkbox" id="mf-svc-b" name="services" type="checkbox" value="b">
+    <label for="mf-svc-b">Service B</label>
+  </div>
+</fieldset>
+
+<!-- Consent checkbox: never pre-ticked, links to the policy -->
+<div class="checkbox-group">
+  <input class="checkbox" id="mf-consent" name="consent" type="checkbox" required>
+  <label for="mf-consent">I agree to the <a class="text-brand-80 underline" href="/privacy">privacy policy</a></label>
+</div>
+
+<!-- Search bar: form + labelled search input + submit -->
+<form class="cluster" role="search" method="get" action="/search" style="gap: 0.5rem">
+  <label class="sr-only" for="mf-search">Search this site</label>
+  <input class="input" id="mf-search" name="q" type="search" style="max-width: 20rem">
+  <button class="btn btn-primary" type="submit">Search</button>
+</form>
+
+<!-- Validation summary: focus this container on failed submit (tabindex="-1");
+     each link moves focus to the matching field -->
+<div class="error-summary" role="alert" aria-labelledby="mf-error-summary-title" tabindex="-1">
+  <h2 class="text-xl font-semibold" id="mf-error-summary-title">There is a problem</h2>
+  <ul>
+    <li><a href="#mf-email">Enter an email address in the correct format</a></li>
+    <li><a href="#mf-name">Enter your full name</a></li>
+  </ul>
+</div>
+
+<!-- Submit row -->
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit">Send enquiry</button>
+  <span class="text-sm text-neutral-60">We reply within one working day.</span>
+</div>

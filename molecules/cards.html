@@ -1,0 +1,105 @@
+<!-- emily-components/molecules: cards
+     All cards = .card + atom content. .card-media makes an image flush with the
+     card's top edge. One real link per card; stretched-link pattern for whole-card
+     click. No hard-coded colours — role tokens via classes only. -->
+
+<!-- Basic card -->
+<article class="card stack-sm">
+  <h3 class="text-xl font-semibold">Card title</h3>
+  <p class="text-neutral-60">Supporting copy in one or two sentences.</p>
+</article>
+
+<!-- Image card: media flush to the top, then padded content -->
+<article class="card stack-sm">
+  <div class="card-media">
+    <img class="aspect-3/2" src="placeholder-wide.jpg" width="600" height="400" alt="">
+  </div>
+  <h3 class="text-xl font-semibold">Image card title</h3>
+  <p class="text-neutral-60">Copy under a flush image.</p>
+</article>
+
+<!-- Service card: whole card clickable, arrow decorative -->
+<article class="card card-hover stack-sm relative">
+  <h3 class="text-xl font-semibold">
+    <a class="text-neutral-90 no-underline" href="/services/example">Service name<span class="absolute inset-0" aria-hidden="true"></span></a>
+  </h3>
+  <p class="text-neutral-60">What this service covers and who it is for.</p>
+  <span class="text-brand-80 font-semibold" aria-hidden="true">Learn more →</span>
+</article>
+
+<!-- Feature card: icon + heading + copy -->
+<article class="card stack-sm">
+  <svg class="fill-current w-8 h-8 text-brand-80" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 1l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+  <h3 class="text-xl font-semibold">Feature name</h3>
+  <p class="text-neutral-60">One sentence on the benefit, not the mechanism.</p>
+</article>
+
+<!-- Case study card -->
+<article class="card card-hover stack-sm relative">
+  <div class="card-media">
+    <img class="aspect-3/2" src="placeholder-work.jpg" width="600" height="400" alt="">
+  </div>
+  <p class="eyebrow" style="margin-bottom: 0">Sector name</p>
+  <h3 class="text-xl font-semibold">
+    <a class="text-neutral-90 no-underline" href="/case-studies/example">Project outcome in one line<span class="absolute inset-0" aria-hidden="true"></span></a>
+  </h3>
+  <p class="text-neutral-60">What was done and what changed for the client.</p>
+</article>
+
+<!-- Blog/news card -->
+<article class="card card-hover stack-sm relative">
+  <h3 class="text-xl font-semibold">
+    <a class="text-neutral-90 no-underline" href="/blog/example">Article headline<span class="absolute inset-0" aria-hidden="true"></span></a>
+  </h3>
+  <p class="text-neutral-60">Standfirst summarising the article.</p>
+  <p class="text-sm text-neutral-60"><time datetime="2026-07-01">1 July 2026</time> · 4 min read</p>
+</article>
+
+<!-- Testimonial card: quote semantics, attribution outside the blockquote -->
+<figure class="card stack-sm">
+  <blockquote>
+    <p class="text-neutral-80">“Direct quote about the result, in the customer's words.”</p>
+  </blockquote>
+  <figcaption class="cluster" style="gap: 0.75rem">
+    <img class="avatar avatar-sm" src="placeholder-face.jpg" alt="">
+    <span>
+      <span class="font-semibold text-neutral-90">Customer name</span>
+      <span class="block text-sm text-neutral-60">Town or context</span>
+    </span>
+  </figcaption>
+</figure>
+
+<!-- Stat block -->
+<div class="stack-sm">
+  <p class="text-5xl font-bold text-brand-80">1,200+</p>
+  <p class="text-neutral-60">jobs completed</p>
+</div>
+
+<!-- Price tag -->
+<p>
+  <span class="text-4xl font-bold text-neutral-90">£99</span>
+  <span class="text-neutral-60">/ month</span>
+</p>
+
+<!-- Author/byline block -->
+<div class="media-object">
+  <img class="avatar" src="placeholder-face.jpg" alt="">
+  <div>
+    <p class="font-semibold text-neutral-90">Author name</p>
+    <p class="text-sm text-neutral-60">Role · <time datetime="2026-07-01">1 July 2026</time></p>
+  </div>
+</div>
+
+<!-- Contact method card -->
+<article class="card stack-sm">
+  <h3 class="text-xl font-semibold">Call us</h3>
+  <p class="text-neutral-60">Mon–Fri, 8am–6pm</p>
+  <a class="btn btn-secondary" href="tel:+441234567890">01234 567 890</a>
+</article>
+
+<!-- Download/resource item -->
+<article class="card stack-sm">
+  <h3 class="text-xl font-semibold">Resource title</h3>
+  <p class="text-neutral-60">One line on what the document covers.</p>
+  <a class="btn btn-secondary" href="/files/resource.pdf" download>Download guide (PDF, 1.2 MB)</a>
+</article>

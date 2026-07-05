@@ -33,11 +33,11 @@
     },
     "molecule": {
       "total": 42,
-      "built": 8,
-      "planned": 24,
+      "built": 31,
       "needs-css": 1,
       "needs-js": 6,
-      "needs-a11y-review": 3
+      "needs-a11y-review": 3,
+      "planned": 1
     },
     "organism": {
       "total": 100,
@@ -1721,33 +1721,33 @@
       ],
       "accessibilityNotes": "Hint and error linked via aria-describedby; error styling driven by aria-invalid.",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": "emily-components/patterns/forms.html"
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-required-field-marker",
       "name": "Required field marker",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Mark optional fields instead where most fields are required.",
+      "accessibilityNotes": "State the rule up front; mark optional fields rather than starring every required one.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-optional-field-marker",
       "name": "Optional field marker",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Marker lives inside the label text so AT reads it.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-fieldset-with-legend",
@@ -1760,22 +1760,22 @@
       "states": [],
       "accessibilityNotes": "Example exists, but enhanced fieldset/legend styling requires formBase: true in emily.config.json.",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": "emily-components/patterns/forms.html"
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-radio-group",
       "name": "Radio group",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-inputs-radio"
       ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Atom radio examples exist; molecule-level fieldset + legend radio group example outstanding. Wrap in fieldset + legend naming the question.",
+      "accessibilityNotes": "Fieldset + legend names the question; single name attribute per group.",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-checkbox-group",
@@ -1790,7 +1790,7 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": "emily-components/patterns/forms.html"
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-toggle-row",
@@ -1812,16 +1812,16 @@
       "name": "Search bar",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-inputs-search-input",
         "atom-buttons-primary-button"
       ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "role=search landmark; sr-only label on the input.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-address-lookup-row",
@@ -1869,28 +1869,28 @@
       "name": "Consent checkbox",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-inputs-checkbox"
       ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Never pre-ticked; link to policy text.",
+      "accessibilityNotes": "Never pre-ticked; policy link inside the label.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-validation-summary",
       "name": "Validation summary",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "CSS exists (.error-summary), example and focus-management docs outstanding.",
+      "accessibilityNotes": "tabindex=-1 container focused on failed submit; role=alert; links move focus to fields. Focus moving itself is consumer JS.",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-submit-row",
@@ -1903,7 +1903,7 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": "emily-components/patterns/forms.html"
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-multi-step-progress-indicator",
@@ -1931,23 +1931,23 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": "emily-components/patterns/cards.html"
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-image-card",
       "name": "Image card",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "molecule-content-molecules-basic-card",
         "atom-media-fixed-ratio-image"
       ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
-      "filePath": "",
-      "examplesPath": ""
+      "accessibilityNotes": "Decorative card images use alt=\"\".",
+      "filePath": "emily-css/src/generators/patterns.js",
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-service-card",
@@ -1962,59 +1962,66 @@
       "states": [],
       "accessibilityNotes": "Whole-card click via stretched link; one real link per card.",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": "emily-components/patterns/cards.html"
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-feature-card",
       "name": "Feature card",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-basic-card",
+        "atom-media-svg-icon-wrapper"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Icon aria-hidden; heading carries the meaning.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-case-study-card",
       "name": "Case study card",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-image-card"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-blog-news-card",
       "name": "Blog/news card",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Machine-readable time element for dates.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-testimonial-card",
       "name": "Testimonial card",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "atom-media-avatar"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Quote + attribution structure; avoid blockquote misuse for layout.",
+      "accessibilityNotes": "figure/blockquote/figcaption; attribution outside the quote.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-review-card",
@@ -2027,7 +2034,7 @@
       ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Blocked on rating/review stars (needs-a11y-review); text-based rating variant possible later.",
       "filePath": "",
       "examplesPath": ""
     },
@@ -2036,33 +2043,33 @@
       "name": "Stat block",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-price-tag",
       "name": "Price tag",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Price and period in one readable phrase.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-author-byline-block",
       "name": "Author/byline block",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-media-avatar"
       ],
@@ -2070,20 +2077,23 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-contact-method-card",
       "name": "Contact method card",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-basic-card",
+        "atom-buttons-call-button"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-accreditation-badge-item",
@@ -2120,26 +2130,26 @@
       "name": "Process step",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Number badge decorative; heading text carries the order.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/content.html"
     },
     {
       "id": "molecule-content-molecules-faq-item",
       "name": "FAQ item",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Native details/summary first; JS accordion only if needed.",
+      "accessibilityNotes": "Native details/summary — no JS, keyboard and AT support built in.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/content.html"
     },
     {
       "id": "molecule-content-molecules-accordion-item",
@@ -2172,13 +2182,18 @@
       "name": "Alert/notification banner",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
-      "variants": [],
+      "variants": [
+        "success",
+        "warning",
+        "error",
+        "info"
+      ],
       "states": [],
-      "accessibilityNotes": "Molecule, not atom: status + icon + text + optional action. role=\"alert\" only for interruptions.",
-      "filePath": "",
-      "examplesPath": ""
+      "accessibilityNotes": "Bold status word leads so meaning is not colour-only. role=alert only for injected interruptions.",
+      "filePath": "emily-css/src/generators/patterns.js",
+      "examplesPath": "emily-components/molecules/content.html"
     },
     {
       "id": "molecule-content-molecules-cookie-notice-banner",
@@ -2198,39 +2213,39 @@
       "name": "Social share links",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Plain share hrefs, no tracking scripts; list labelled.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/content.html"
     },
     {
       "id": "molecule-content-molecules-breadcrumb-trail",
       "name": "Breadcrumb trail",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "nav aria-label=\"Breadcrumb\"; current page aria-current=\"page\".",
+      "accessibilityNotes": "nav aria-label=Breadcrumb; separators aria-hidden; current page aria-current=page, not a link.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/content.html"
     },
     {
       "id": "molecule-content-molecules-pagination",
       "name": "Pagination",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "nav landmark; current page marked, not colour-only.",
+      "accessibilityNotes": "nav landmark; aria-current=page on the current item; prev/next have full accessible names.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/content.html"
     },
     {
       "id": "molecule-content-molecules-back-to-top-button",
@@ -2263,28 +2278,28 @@
       "name": "Related link item",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/content.html"
     },
     {
       "id": "molecule-content-molecules-download-resource-item",
       "name": "Download/resource item",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-buttons-download-button"
       ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "File type and size in the link text.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "organism-navigation-simple-header",
