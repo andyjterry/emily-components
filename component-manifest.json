@@ -55,8 +55,8 @@
     },
     "page": {
       "total": 14,
-      "built": 1,
-      "planned": 13
+      "built": 6,
+      "planned": 8
     }
   },
   "components": [
@@ -4168,13 +4168,16 @@
       "name": "Professional services starter",
       "layer": "page",
       "category": "starters",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "template-core-pages-homepage",
+        "template-core-pages-about-page"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
-      "filePath": "",
-      "examplesPath": ""
+      "accessibilityNotes": "Utility top bar, labelled landmarks, consultation form with confidentiality note.",
+      "filePath": "emily-starters/professional-services/index.html",
+      "examplesPath": "emily-starters/professional-services/index.html"
     },
     {
       "id": "page-starters-grant-funding-led-microsite-starter",
@@ -4185,7 +4188,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Stays planned: template exists (grant landing page); microsite scope (multi-page) worth a product decision on structure first.",
       "filePath": "",
       "examplesPath": ""
     },
@@ -4194,39 +4197,49 @@
       "name": "One-page business starter",
       "layer": "page",
       "category": "starters",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "template-core-pages-homepage",
+        "template-core-pages-faq-page",
+        "template-core-pages-contact-page"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
-      "filePath": "",
-      "examplesPath": ""
+      "accessibilityNotes": "Sticky header with anchor nav; FAQ uses details/summary (AT sign-off tracked on the FAQ entries).",
+      "filePath": "emily-starters/one-page-business/index.html",
+      "examplesPath": "emily-starters/one-page-business/index.html"
     },
     {
       "id": "page-starters-campaign-landing-page-starter",
       "name": "Campaign landing page starter",
       "layer": "page",
       "category": "starters",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "template-client-acquisition-pages-campaign-landing-page",
+        "template-client-acquisition-pages-ppc-landing-page"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
-      "filePath": "",
-      "examplesPath": ""
+      "accessibilityNotes": "Minimal chrome, one conversion goal, noindex meta.",
+      "filePath": "emily-starters/campaign-landing/index.html",
+      "examplesPath": "emily-starters/campaign-landing/index.html"
     },
     {
       "id": "page-starters-portfolio-case-study-starter",
       "name": "Portfolio/case-study starter",
       "layer": "page",
       "category": "starters",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "template-core-pages-case-studies-index",
+        "template-core-pages-gallery-portfolio-page"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
-      "filePath": "",
-      "examplesPath": ""
+      "filePath": "emily-starters/portfolio-case-study/index.html",
+      "examplesPath": "emily-starters/portfolio-case-study/index.html"
     },
     {
       "id": "page-starters-health-wellness-starter",
@@ -4246,13 +4259,15 @@
       "name": "Charity/community organisation starter",
       "layer": "page",
       "category": "starters",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "template-core-pages-homepage"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
-      "filePath": "",
-      "examplesPath": ""
+      "accessibilityNotes": "Donate is an external link (marked for AT); volunteer form uses a labelled checkbox fieldset. No payment processing in the starter.",
+      "filePath": "emily-starters/charity-community/index.html",
+      "examplesPath": "emily-starters/charity-community/index.html"
     },
     {
       "id": "page-starters-hospitality-venue-starter",
@@ -4276,7 +4291,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Stays planned: cart/checkout needs JS and a payment decision — out of scope for the static starter layer.",
       "filePath": "",
       "examplesPath": ""
     },
@@ -4302,7 +4317,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Stays planned: member login/gating needs a backend decision.",
       "filePath": "",
       "examplesPath": ""
     },

@@ -18,8 +18,8 @@ tokens / ions → manifest → atoms → molecules → organisms → templates �
 - **Molecules** (`molecules/`) — built where no JS/a11y-review blocker exists.
 - **Organisms** (`organisms/`) — built where no JS/a11y-review blocker exists.
 - **Templates** (`templates/`) — page-level section orders composed from organisms.
-- **Pages and starters** come after that (`emily-starters`).
-- The browsable **catalogue** comes last.
+- **Pages/starters** — working sites in `emily-starters` (6 built; remainder tracked in the manifest).
+- The browsable **catalogue** comes last — not started.
 
 Brandbadger is the first consumer of this system, not its owner. Nothing in here carries client copy or business assumptions.
 
