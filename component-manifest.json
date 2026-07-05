@@ -33,16 +33,16 @@
     },
     "molecule": {
       "total": 42,
-      "built": 10,
-      "planned": 22,
+      "built": 8,
+      "planned": 24,
       "needs-css": 1,
       "needs-js": 6,
       "needs-a11y-review": 3
     },
     "organism": {
       "total": 100,
-      "built": 15,
-      "planned": 68,
+      "built": 13,
+      "planned": 70,
       "needs-js": 9,
       "needs-a11y-review": 4,
       "deferred": 4
@@ -1758,7 +1758,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Legend styled via formBase config; groups related controls.",
+      "accessibilityNotes": "Example exists, but enhanced fieldset/legend styling requires formBase: true in emily.config.json.",
       "filePath": "emily-css/src/generators/patterns.js",
       "examplesPath": "emily-components/patterns/forms.html"
     },
@@ -1767,15 +1767,15 @@
       "name": "Radio group",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "built",
+      "status": "planned",
       "dependencies": [
         "atom-inputs-radio"
       ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Wrap in fieldset + legend naming the question.",
+      "accessibilityNotes": "Atom radio examples exist; molecule-level fieldset + legend radio group example outstanding. Wrap in fieldset + legend naming the question.",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": "emily-components/patterns/forms.html"
+      "examplesPath": ""
     },
     {
       "id": "molecule-form-molecules-checkbox-group",
@@ -1884,13 +1884,13 @@
       "name": "Validation summary",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "built",
+      "status": "planned",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": ".error-summary — focus it on failed submit; links target the offending fields.",
+      "accessibilityNotes": "CSS exists (.error-summary), example and focus-management docs outstanding.",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": "emily-components/patterns/forms.html"
+      "examplesPath": ""
     },
     {
       "id": "molecule-form-molecules-submit-row",
@@ -2792,13 +2792,13 @@
       "name": "Detailed quote form",
       "layer": "organism",
       "category": "conversion-sections",
-      "status": "built",
+      "status": "planned",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Existing forms example is a short enquiry form only; detailed quote example outstanding.",
       "filePath": "",
-      "examplesPath": "emily-components/patterns/forms.html"
+      "examplesPath": ""
     },
     {
       "id": "organism-conversion-sections-multi-step-quote-form",
@@ -3429,41 +3429,41 @@
       "name": "Content intro block",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
-      "filePath": "",
-      "examplesPath": ""
+      "filePath": "emily-css/src/generators/patterns.js",
+      "examplesPath": "emily-components/patterns/sections.html"
     },
     {
       "id": "organism-informational-sections-text-only-editorial-section",
       "name": "Text-only editorial section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "built",
+      "status": "planned",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": ".prose reading column.",
+      "accessibilityNotes": "CSS (.prose) exists; section-level editorial example outstanding.",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": "emily-components/patterns/sections.html"
+      "examplesPath": ""
     },
     {
       "id": "organism-informational-sections-text-and-image-section",
       "name": "Text and image section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "built",
+      "status": "planned",
       "dependencies": [
         "atom-layout-primitives-split-layout"
       ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "CSS (.split) exists; example currently shows text + card panel, image variant outstanding.",
       "filePath": "",
-      "examplesPath": "emily-components/patterns/sections.html"
+      "examplesPath": ""
     },
     {
       "id": "organism-informational-sections-pull-quote-section",
