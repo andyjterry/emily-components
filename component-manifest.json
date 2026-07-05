@@ -33,11 +33,9 @@
     },
     "molecule": {
       "total": 42,
-      "built": 31,
+      "built": 34,
       "needs-css": 1,
-      "needs-js": 6,
-      "needs-a11y-review": 3,
-      "planned": 1
+      "needs-js": 7
     },
     "organism": {
       "total": 100,
@@ -1912,13 +1910,13 @@
       "name": "Multi-step progress indicator",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "needs-a11y-review",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Step state must be announced (aria-current=\"step\") — review before build.",
+      "accessibilityNotes": "Static one-page-per-step pattern: nav landmark, visible 'Step X of Y' text, aria-current=step. Safe because nothing updates in place. JS-driven single-page wizards remain needs-js (see multi-step quote form).",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-content-molecules-basic-card",
@@ -2030,15 +2028,16 @@
       "name": "Review card",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
+        "molecule-content-molecules-testimonial-card",
         "molecule-content-molecules-rating-review-stars"
       ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Blocked on rating/review stars (needs-a11y-review); text-based rating variant possible later.",
+      "accessibilityNotes": "Testimonial card plus display-only text-carried rating.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/cards.html"
     },
     {
       "id": "molecule-content-molecules-stat-block",
@@ -2158,11 +2157,11 @@
       "name": "Accordion item",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "needs-a11y-review",
+      "status": "needs-js",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "details/summary vs button+region decision affects AT behaviour.",
+      "accessibilityNotes": "Moved from needs-a11y-review: the ARIA accordion pattern (button + aria-expanded + region) cannot work without JS. For no-JS disclosure use the built FAQ item (native details/summary).",
       "filePath": "",
       "examplesPath": ""
     },
@@ -2267,13 +2266,13 @@
       "name": "Rating/review stars",
       "layer": "molecule",
       "category": "content-molecules",
-      "status": "needs-a11y-review",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Display-only rating needs text equivalent; input rating is harder — review first.",
+      "accessibilityNotes": "Display-only: star glyphs aria-hidden, rating carried by visible or sr-only text — no AT-dependent behaviour. Interactive rating input is a separate needs-js widget, out of scope here.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/molecules/content.html"
     },
     {
       "id": "molecule-content-molecules-related-link-item",
@@ -2403,7 +2402,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Contrast over imagery cannot be guaranteed — review per use.",
+      "accessibilityNotes": "Stays needs-a11y-review: text-over-image contrast cannot be verified statically — must be checked per real image, plus scroll/contrast fallback decision.",
       "filePath": "",
       "examplesPath": ""
     },
@@ -2616,7 +2615,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Text-over-image contrast needs per-use verification.",
+      "accessibilityNotes": "Stays needs-a11y-review: same per-image contrast problem; needs a tested overlay/scrim treatment before an example ships.",
       "filePath": "",
       "examplesPath": ""
     },
@@ -3224,7 +3223,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Header scope, caption, and mobile scroll pattern need review.",
+      "accessibilityNotes": "Stays needs-a11y-review: needs real content in a caption + th[scope] table inside .scroll-area, tested on mobile and with AT before an example ships. Card-based comparison (packages) is the built alternative.",
       "filePath": "",
       "examplesPath": ""
     },
@@ -3468,7 +3467,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Example built with native details/summary; stays needs-a11y-review until AT announcement quality is manually verified.",
+      "accessibilityNotes": "Static review passed: native details/summary, no ARIA, keyboard native, names from summary text. Stays needs-a11y-review only for one manual AT pass over a grouped set (announcement quality across many items) — no markup changes expected.",
       "filePath": "",
       "examplesPath": "emily-components/organisms/informational.html"
     },
@@ -3836,7 +3835,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Template built with native details/summary FAQ items; inherits the FAQ accordion's pending AT sign-off.",
+      "accessibilityNotes": "Static review passed; inherits the FAQ accordion's single remaining manual AT check. No markup changes expected.",
       "filePath": "",
       "examplesPath": "emily-components/templates/content-pages.html"
     },

@@ -94,3 +94,16 @@
   <button class="btn btn-primary" type="submit">Send enquiry</button>
   <span class="text-sm text-neutral-60">We reply within one working day.</span>
 </div>
+
+<!-- Multi-step progress indicator (static, one page per step).
+     Server renders the current state; aria-current="step" marks position and the
+     visible "Step X of Y" text carries it without relying on styling.
+     A JS-driven single-page wizard is a different, needs-js pattern. -->
+<nav aria-label="Form progress">
+  <p class="text-sm text-neutral-60">Step 2 of 3</p>
+  <ol class="inline-list text-sm">
+    <li><span class="text-neutral-60">1. Your details</span></li>
+    <li><span class="font-semibold text-neutral-90" aria-current="step">2. The job</span></li>
+    <li><span class="text-neutral-60">3. Confirm</span></li>
+  </ol>
+</nav>

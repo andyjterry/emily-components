@@ -12,7 +12,7 @@
 <!-- Image card: media flush to the top, then padded content -->
 <article class="card stack-sm">
   <div class="card-media">
-    <img class="aspect-3/2" src="placeholder-wide.jpg" width="600" height="400" alt="">
+    <img class="aspect-3/2" src="/images/placeholders/hero-service.jpg" width="600" height="400" alt="">
   </div>
   <h3 class="text-xl font-semibold">Image card title</h3>
   <p class="text-neutral-60">Copy under a flush image.</p>
@@ -37,7 +37,7 @@
 <!-- Case study card -->
 <article class="card card-hover stack-sm relative">
   <div class="card-media">
-    <img class="aspect-3/2" src="placeholder-work.jpg" width="600" height="400" alt="">
+    <img class="aspect-3/2" src="/images/placeholders/case-study.jpg" width="600" height="400" alt="">
   </div>
   <p class="eyebrow" style="margin-bottom: 0">Sector name</p>
   <h3 class="text-xl font-semibold">
@@ -61,7 +61,7 @@
     <p class="text-neutral-80">“Direct quote about the result, in the customer's words.”</p>
   </blockquote>
   <figcaption class="cluster" style="gap: 0.75rem">
-    <img class="avatar avatar-sm" src="placeholder-face.jpg" alt="">
+    <img class="avatar avatar-sm" src="/images/placeholders/team-member.jpg" alt="">
     <span>
       <span class="font-semibold text-neutral-90">Customer name</span>
       <span class="block text-sm text-neutral-60">Town or context</span>
@@ -83,12 +83,27 @@
 
 <!-- Author/byline block -->
 <div class="media-object">
-  <img class="avatar" src="placeholder-face.jpg" alt="">
+  <img class="avatar" src="/images/placeholders/team-member.jpg" alt="">
   <div>
     <p class="font-semibold text-neutral-90">Author name</p>
     <p class="text-sm text-neutral-60">Role · <time datetime="2026-07-01">1 July 2026</time></p>
   </div>
 </div>
+
+<!-- Review card: testimonial card + display-only rating (text carries the score) -->
+<figure class="card stack-sm">
+  <p class="cluster" style="gap: 0.5rem">
+    <span class="text-warning-80" aria-hidden="true">★★★★★</span>
+    <span class="sr-only">Rated 5 out of 5</span>
+  </p>
+  <blockquote>
+    <p class="text-neutral-80">“Direct quote about the experience, in the reviewer's words.”</p>
+  </blockquote>
+  <figcaption>
+    <span class="font-semibold text-neutral-90">Reviewer name</span>
+    <span class="block text-sm text-neutral-60"><time datetime="2026-06">June 2026</time> · verified customer</span>
+  </figcaption>
+</figure>
 
 <!-- Contact method card -->
 <article class="card stack-sm">

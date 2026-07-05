@@ -133,6 +133,26 @@ Still blocked: booking page (deferred booking widget); FAQ page carries `needs-a
 | `patterns/trust-strip.html` | Accreditation/proof strip, badges |
 | `patterns/header-footer.html` | Site header with skip link, footer |
 
+## Image placeholders
+
+Examples reference **local placeholder paths only** — never third-party image services:
+
+```text
+/images/placeholders/hero-service.jpg     /images/placeholders/team-member.jpg
+/images/placeholders/case-study.jpg       /images/placeholders/project-before.jpg
+/images/placeholders/project-after.jpg    /images/placeholders/community-event.jpg
+/images/placeholders/office.jpg           /images/placeholders/workshop.jpg
+/images/placeholders/logo-placeholder.svg
+```
+
+Rules:
+
+- Reusable examples must never depend on a live third-party image host. No `source.unsplash.com`, no hotlinks, no API keys.
+- During prototyping you may drop Unsplash (or any licensed) images into `/images/placeholders/` under these names — the markup doesn't change.
+- Production projects replace placeholders with approved/licensed images or a proper image pipeline.
+- Meaningful images get real alt text; decorative images get `alt=""`; fixed-ratio images use `aspect-*` classes (and `width`/`height` where no ratio class applies) to avoid layout shift.
+- If an Unsplash API integration is ever added, it must handle attribution and download-tracking requirements properly — not a v1 concern.
+
 ## Relationship to the rest of Emily UI
 
 ```text
