@@ -1,0 +1,143 @@
+<!-- emily-components/templates: marketing pages
+     Templates are full-page section orders composed from organisms/.
+     The first template shows full page chrome (skip link, header, footer).
+     Later templates show <main> only — reuse the same chrome.
+     For the full version of any section, see the referenced organism file. -->
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Homepage
+     Order: hero → trust strip → services grid → why-us split → testimonials
+            → CTA band → contact entry → footer
+     ══════════════════════════════════════════════════════════════════ -->
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="py-4 border-b border-neutral-20">
+  <div class="width-container cluster-between">
+    <a class="text-xl font-bold text-neutral-90 no-underline" href="/">Business Name</a>
+    <nav aria-label="Main">
+      <ul class="inline-list">
+        <li><a class="text-neutral-80" href="/services">Services</a></li>
+        <li><a class="text-neutral-80" href="/about">About</a></li>
+        <li><a class="btn btn-primary btn-sm" href="/contact">Get a quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- organisms/heroes.html → Homepage hero -->
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Trusted local service</span>
+      <h1 class="hero-title">A clear headline about the outcome you deliver</h1>
+      <p class="hero-lead">Who you help, where you work, why people choose you.</p>
+      <div class="button-group">
+        <a class="btn btn-primary btn-lg" href="/quote">Get a free quote</a>
+        <a class="btn btn-secondary btn-lg" href="/services">See what we do</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- patterns/trust-strip.html → text badge strip -->
+  <section class="section-sm" aria-label="Why customers trust us">
+    <div class="width-container">
+      <ul class="trust-strip">
+        <li><span class="badge">Certified</span></li>
+        <li><span class="badge">Fully insured</span></li>
+        <li><span class="badge">Free quotes</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- patterns/cards.html → service card grid (3 cards) -->
+  <section class="section" aria-labelledby="t-services">
+    <div class="width-container stack-lg">
+      <h2 class="text-3xl font-semibold" id="t-services">What we can help with</h2>
+      <div class="grid-auto" role="list">
+        <article class="card card-hover stack-sm relative" role="listitem">
+          <h3 class="text-xl font-semibold"><a class="text-neutral-90 no-underline" href="/services/one">Service one<span class="absolute inset-0" aria-hidden="true"></span></a></h3>
+          <p class="text-neutral-60">Short description.</p>
+        </article>
+        <!-- + two more cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- patterns/sections.html → why-us split -->
+  <!-- organisms/trust.html → testimonials grid -->
+  <!-- patterns/cta-band.html → CTA band -->
+  <!-- organisms/conversion.html → contact choice cards or short enquiry form -->
+</main>
+
+<!-- organisms/navigation.html → footer multi-column -->
+<footer class="section bg-neutral-10 border-t border-neutral-20">
+  <div class="width-container cluster-between">
+    <p class="font-semibold text-neutral-90">Business Name</p>
+    <nav aria-label="Legal">
+      <ul class="inline-list text-sm">
+        <li><a class="text-neutral-80" href="/privacy">Privacy</a></li>
+        <li><a class="text-neutral-80" href="/accessibility">Accessibility</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: About page
+     Chrome: as Homepage. Order: centred hero → founder section → team
+             → credibility/QA blocks → local proof → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">About us</span>
+      <h1 class="hero-title">Who we are and how we work</h1>
+      <p class="hero-lead">The one-paragraph version of the story.</p>
+    </div>
+  </section>
+
+  <!-- organisms/trust.html → founder/owner credibility section -->
+  <section class="section">
+    <div class="width-container split">
+      <img class="aspect-4/3 object-cover w-full rounded-md" src="placeholder-founder.jpg" alt="Founder name at work">
+      <div class="stack">
+        <h2 class="text-3xl font-semibold">Who you are dealing with</h2>
+        <p class="text-neutral-60">Founder background and why the business runs the way it does.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- organisms/trust.html → team section -->
+  <!-- organisms/trust.html → accessibility and quality assurance block -->
+  <!-- organisms/trust.html → local proof section -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Reviews/testimonials page
+     Chrome: as Homepage. Order: hero with review proof → testimonials grid
+             → insurance/guarantee block → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <!-- organisms/heroes.html → hero with review proof -->
+  <section class="section-lg">
+    <div class="width-container">
+      <h1 class="hero-title">What customers say</h1>
+      <p class="text-neutral-80"><strong class="text-neutral-90">Rated 4.9 out of 5</strong> from 200+ local reviews</p>
+    </div>
+  </section>
+
+  <!-- organisms/trust.html → testimonials grid (repeat block for more reviews) -->
+  <section class="section">
+    <div class="width-container grid-auto">
+      <figure class="card stack-sm">
+        <blockquote><p class="text-neutral-80">“Short quote about the result.”</p></blockquote>
+        <figcaption><span class="font-semibold text-neutral-90">Customer name</span> <span class="block text-sm text-neutral-60">Town</span></figcaption>
+      </figure>
+      <!-- + more testimonial cards -->
+    </div>
+  </section>
+
+  <!-- organisms/trust.html → insurance/guarantee block -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>

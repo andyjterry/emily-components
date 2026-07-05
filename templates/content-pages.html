@@ -1,0 +1,151 @@
+<!-- emily-components/templates: content pages
+     Chrome: see templates/marketing.html Homepage.
+     FAQ page template uses native details/summary — final AT sign-off tracked
+     as needs-a11y-review in the manifest (same as the FAQ accordion organism). -->
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Blog/news index
+     Order: hero → blog grid → pagination → internal link cluster
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">News</span>
+      <h1 class="hero-title">Latest articles</h1>
+    </div>
+  </section>
+
+  <!-- organisms/informational.html → blog/news grid -->
+  <!-- molecules/content.html → pagination -->
+  <section class="section-sm">
+    <div class="width-container">
+      <nav aria-label="Pagination">
+        <ul class="inline-list">
+          <li><span class="btn btn-secondary btn-sm" aria-current="page">1</span></li>
+          <li><a class="btn btn-ghost btn-sm" href="?page=2">2</a></li>
+          <li><a class="btn btn-ghost btn-sm" href="?page=2">Next<span class="sr-only"> page</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- organisms/informational.html → internal link cluster -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Single article page
+     Order: breadcrumb → article header + byline → prose body → pull quote
+            → share links → related articles → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <article class="section">
+    <div class="width-container stack-lg">
+      <header class="stack-sm content-wide">
+        <nav aria-label="Breadcrumb">
+          <ol class="inline-list text-sm">
+            <li><a class="text-neutral-80" href="/blog">News</a> <span class="text-neutral-60" aria-hidden="true">/</span></li>
+            <li><span class="text-neutral-90 font-semibold" aria-current="page">Article headline</span></li>
+          </ol>
+        </nav>
+        <h1 class="text-5xl font-bold text-neutral-90">Article headline</h1>
+        <!-- molecules/cards.html → author/byline block -->
+        <div class="media-object">
+          <img class="avatar" src="placeholder-face.jpg" alt="">
+          <div>
+            <p class="font-semibold text-neutral-90">Author name</p>
+            <p class="text-sm text-neutral-60">Role · <time datetime="2026-07-01">1 July 2026</time></p>
+          </div>
+        </div>
+      </header>
+
+      <!-- organisms/informational.html → text-only editorial section (prose body) -->
+      <div class="prose">
+        <p>Article body in a comfortable reading column.</p>
+        <h2>Subheading</h2>
+        <p>More copy.</p>
+      </div>
+
+      <!-- organisms/informational.html → pull quote section -->
+      <!-- molecules/content.html → social share links -->
+      <!-- organisms/informational.html → related articles section -->
+    </div>
+  </article>
+  <!-- patterns/cta-band.html → CTA band -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Case studies index
+     Order: hero → case study teaser (featured) → portfolio grid → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Our work</span>
+      <h1 class="hero-title">Recent projects</h1>
+    </div>
+  </section>
+
+  <!-- organisms/media-portfolio.html → case study teaser section (featured) -->
+  <!-- organisms/media-portfolio.html → portfolio grid (all case studies) -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Single case study
+     Order: case study detail layout (hero, facts panel, prose)
+            → gallery grid → testimonial card (client quote) → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <!-- organisms/media-portfolio.html → case study detail layout (whole block) -->
+  <!-- organisms/media-portfolio.html → gallery grid (project photos) -->
+  <!-- molecules/cards.html → testimonial card (the client's words) -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Gallery/portfolio page
+     Order: hero → masonry gallery (or gallery grid) → before/after pairs
+            → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Gallery</span>
+      <h1 class="hero-title">Our work in pictures</h1>
+    </div>
+  </section>
+
+  <!-- organisms/media-portfolio.html → masonry gallery -->
+  <!-- atoms/media.html → before/after labelled pairs -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: FAQ page  (needs-a11y-review: details/summary AT sign-off)
+     Order: hero → FAQ groups by topic → warning/advice block
+            → contact choice cards
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Help</span>
+      <h1 class="hero-title">Frequently asked questions</h1>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="tf-booking">
+    <div class="width-container stack-lg">
+      <h2 class="text-3xl font-semibold" id="tf-booking">Booking and quotes</h2>
+      <div class="stack">
+        <details class="card">
+          <summary class="text-lg font-semibold cursor-pointer">Question one?</summary>
+          <p class="text-neutral-60" style="margin-top: 0.75rem">Answer.</p>
+        </details>
+        <!-- + more FAQ items; repeat a section per topic -->
+      </div>
+    </div>
+  </section>
+
+  <!-- organisms/informational.html → warning/advice block -->
+  <!-- organisms/conversion.html → contact choice cards -->
+</main>

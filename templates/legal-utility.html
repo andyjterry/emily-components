@@ -1,0 +1,103 @@
+<!-- emily-components/templates: legal & utility pages
+     Chrome: see templates/marketing.html Homepage. Legal pages are prose-first.
+     Utility pages (404, maintenance, coming soon) use minimal or no chrome. -->
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Legal/privacy page  (same shape: terms, cookie policy)
+     Order: plain heading → prose body with dated sections
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section">
+    <div class="width-container stack-lg">
+      <header class="content">
+        <h1 class="text-4xl font-bold text-neutral-90">Privacy policy</h1>
+        <p class="text-sm text-neutral-60">Last updated: <time datetime="2026-07-05">5 July 2026</time></p>
+      </header>
+      <div class="prose">
+        <h2>What we collect</h2>
+        <p>Plain-language policy copy.</p>
+        <h2>How we use it</h2>
+        <p>More policy copy.</p>
+        <h2>Contact</h2>
+        <p>Who to contact about your data.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Terms page — as Legal/privacy with terms sections.
+     TEMPLATE: Cookie policy page — as Legal/privacy; list cookies in a
+     .scroll-area table (see atoms/layout-primitives.html) if needed.
+     ══════════════════════════════════════════════════════════════════ -->
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Accessibility statement page
+     Order: heading → prose (conformance, known issues, feedback route)
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section">
+    <div class="width-container stack-lg">
+      <header class="content">
+        <h1 class="text-4xl font-bold text-neutral-90">Accessibility statement</h1>
+        <p class="text-sm text-neutral-60">Last reviewed: <time datetime="2026-07-05">5 July 2026</time></p>
+      </header>
+      <div class="prose">
+        <h2>Our commitment</h2>
+        <p>Target conformance level and scope.</p>
+        <h2>Known issues</h2>
+        <ul>
+          <li>Honest list of current gaps and workarounds.</li>
+        </ul>
+        <h2>Tell us about a problem</h2>
+        <p>Contact route and expected response time.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: 404 page
+     Order: centred message → search/escape routes. Keep chrome so the
+     visitor can navigate away.
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container stack" style="max-width: 36rem; margin-inline: auto; text-align: center">
+      <p class="eyebrow">404</p>
+      <h1 class="text-4xl font-bold text-neutral-90">That page is not here</h1>
+      <p class="text-neutral-60">The link may be old or mistyped. These usually help:</p>
+      <div class="button-group" style="justify-content: center">
+        <a class="btn btn-primary" href="/">Homepage</a>
+        <a class="btn btn-secondary" href="/services">Services</a>
+        <a class="btn btn-secondary" href="/contact">Contact</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Coming soon page
+     Standalone page, no site chrome. One message, one contact route.
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main" class="cover">
+  <div class="cover-center width-container stack" style="max-width: 36rem; text-align: center">
+    <p class="text-xl font-bold text-neutral-90">Business Name</p>
+    <h1 class="hero-title">Something new is on the way</h1>
+    <p class="hero-lead" style="margin-inline: auto">One sentence about what and roughly when.</p>
+    <p><a class="btn btn-primary" href="mailto:hello@example.com">Get in touch meanwhile</a></p>
+  </div>
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Maintenance page
+     Standalone, no chrome. State the outage plainly and give the
+     urgent-contact route. Serve with HTTP 503 + Retry-After.
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main" class="cover">
+  <div class="cover-center width-container stack" style="max-width: 36rem; text-align: center">
+    <p class="text-xl font-bold text-neutral-90">Business Name</p>
+    <h1 class="text-4xl font-bold text-neutral-90">Down for maintenance</h1>
+    <p class="text-neutral-60">Back by TIME. Urgent? Call <a class="text-brand-80 font-semibold" href="tel:+441234567890">01234 567 890</a>.</p>
+  </div>
+</main>

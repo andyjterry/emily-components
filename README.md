@@ -17,7 +17,8 @@ tokens / ions → manifest → atoms → molecules → organisms → templates �
 - **Atoms** (`atoms/`) — built.
 - **Molecules** (`molecules/`) — built where no JS/a11y-review blocker exists.
 - **Organisms** (`organisms/`) — built where no JS/a11y-review blocker exists.
-- **Templates, pages and starters** come after that.
+- **Templates** (`templates/`) — page-level section orders composed from organisms.
+- **Pages and starters** come after that (`emily-starters`).
 - The browsable **catalogue** comes last.
 
 Brandbadger is the first consumer of this system, not its owner. Nothing in here carries client copy or business assumptions.
@@ -102,6 +103,20 @@ Still blocked: toggle row (`needs-css`), tab item/cookie banner/back-to-top/uplo
 | `organisms/informational.html` | Editorial prose, text+image, pull quote, FAQ (details/summary), checklist, downloads, blog grid, hours, contact details |
 
 Still blocked: dropdown/mega/drawer menus, carousels, lightbox, before/after slider, multi-step forms (`needs-js`); transparent header, comparison table, FAQ accordion sign-off (`needs-a11y-review`); booking widget, quote calculator, third-party embeds (`deferred`).
+
+## Templates
+
+`templates/` defines page-level section orders. The first template in each file shows full chrome (skip link, header, footer); the rest show `<main>` composition with pointers to the organism files.
+
+| File | Templates |
+|---|---|
+| `templates/marketing.html` | Homepage, about, reviews |
+| `templates/service-pages.html` | Services index, single service, area index, single location, pricing |
+| `templates/content-pages.html` | Blog index, article, case studies index + detail, gallery, FAQ page |
+| `templates/contact-and-conversion.html` | Contact, quote request, thank-you, PPC/campaign/grant/lead-magnet/event/comparison/local-SEO landing pages |
+| `templates/legal-utility.html` | Privacy, terms, cookie policy, accessibility statement, 404, coming soon, maintenance |
+
+Still blocked: booking page (deferred booking widget); FAQ page carries `needs-a11y-review` until details/summary AT sign-off.
 
 ## Patterns
 

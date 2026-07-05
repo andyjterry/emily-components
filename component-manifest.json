@@ -49,7 +49,9 @@
     },
     "template": {
       "total": 32,
-      "planned": 32
+      "built": 30,
+      "needs-a11y-review": 1,
+      "planned": 1
     },
     "page": {
       "total": 14,
@@ -3665,364 +3667,425 @@
       "name": "Homepage",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-hero-sections-homepage-hero",
+        "organism-service-sections-services-grid",
+        "organism-trust-sections-testimonials-grid",
+        "organism-conversion-sections-cta-banner",
+        "organism-navigation-footer-multi-column"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Full chrome shown: skip link first, labelled nav landmarks, one h1.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/marketing.html"
     },
     {
       "id": "template-core-pages-about-page",
       "name": "About page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-trust-sections-founder-owner-credibility-section",
+        "organism-trust-sections-team-section"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/marketing.html"
     },
     {
       "id": "template-core-pages-contact-page",
       "name": "Contact page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-conversion-sections-contact-choice-cards",
+        "organism-conversion-sections-short-enquiry-form",
+        "organism-informational-sections-opening-hours-section"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "template-core-pages-services-index",
       "name": "Services index",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-service-sections-featured-services",
+        "organism-service-sections-services-grid"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/service-pages.html"
     },
     {
       "id": "template-core-pages-single-service-page",
       "name": "Single service page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-hero-sections-service-page-hero",
+        "organism-service-sections-problem-solution-blocks",
+        "organism-service-sections-packages-pricing-section",
+        "organism-conversion-sections-detailed-quote-form"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/service-pages.html"
     },
     {
       "id": "template-core-pages-service-area-index",
       "name": "Service-area index",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-service-sections-service-area-list"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/service-pages.html"
     },
     {
       "id": "template-core-pages-single-location-service-area-page",
       "name": "Single location/service-area page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-hero-sections-local-area-hero",
+        "organism-trust-sections-local-proof-section"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/service-pages.html"
     },
     {
       "id": "template-core-pages-case-studies-index",
       "name": "Case studies index",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-media-sections-case-study-teaser-section",
+        "organism-media-sections-portfolio-grid"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/content-pages.html"
     },
     {
       "id": "template-core-pages-single-case-study",
       "name": "Single case study",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-media-sections-case-study-detail-layout",
+        "organism-media-sections-gallery-grid"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/content-pages.html"
     },
     {
       "id": "template-core-pages-reviews-testimonials-page",
       "name": "Reviews/testimonials page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-hero-sections-hero-with-review-proof",
+        "organism-trust-sections-testimonials-grid"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/marketing.html"
     },
     {
       "id": "template-core-pages-faq-page",
       "name": "FAQ page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
+      "status": "needs-a11y-review",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Template built with native details/summary FAQ items; inherits the FAQ accordion's pending AT sign-off.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/content-pages.html"
     },
     {
       "id": "template-core-pages-blog-news-index",
       "name": "Blog/news index",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-informational-sections-blog-news-grid",
+        "molecule-content-molecules-pagination"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/content-pages.html"
     },
     {
       "id": "template-core-pages-single-article-page",
       "name": "Single article page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-informational-sections-text-only-editorial-section",
+        "molecule-content-molecules-author-byline-block",
+        "molecule-content-molecules-social-share-links"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/content-pages.html"
     },
     {
       "id": "template-core-pages-pricing-packages-page",
       "name": "Pricing/packages page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-service-sections-packages-pricing-section",
+        "organism-service-sections-payment-finance-options-block"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/service-pages.html"
     },
     {
       "id": "template-core-pages-gallery-portfolio-page",
       "name": "Gallery/portfolio page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-media-sections-masonry-gallery"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/content-pages.html"
     },
     {
       "id": "template-core-pages-legal-privacy-page",
       "name": "Legal/privacy page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-informational-sections-text-only-editorial-section"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/legal-utility.html"
     },
     {
       "id": "template-core-pages-terms-page",
       "name": "Terms page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Shared shape with legal/privacy template.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/legal-utility.html"
     },
     {
       "id": "template-core-pages-accessibility-statement-page",
       "name": "Accessibility statement page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/legal-utility.html"
     },
     {
       "id": "template-core-pages-cookie-policy-page",
       "name": "Cookie policy page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Shared shape with legal/privacy; cookie table can use .scroll-area. Consent banner itself stays needs-js.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/legal-utility.html"
     },
     {
       "id": "template-core-pages-404-page",
       "name": "404 page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Keep site chrome so visitors can navigate away; offer escape routes.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/legal-utility.html"
     },
     {
       "id": "template-core-pages-thank-you-page",
       "name": "Thank-you page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-conversion-sections-thank-you-confirmation-panel"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "noindex; confirmation panel leads.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "template-core-pages-coming-soon-page",
       "name": "Coming soon page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/legal-utility.html"
     },
     {
       "id": "template-core-pages-maintenance-page",
       "name": "Maintenance page",
       "layer": "template",
       "category": "core-pages",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Serve with HTTP 503 + Retry-After.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/legal-utility.html"
     },
     {
       "id": "template-client-acquisition-pages-ppc-landing-page",
       "name": "PPC landing page",
       "layer": "template",
       "category": "client-acquisition-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-hero-sections-campaign-ppc-hero",
+        "organism-conversion-sections-detailed-quote-form",
+        "organism-conversion-sections-mobile-sticky-call-button"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Minimal header (logo + phone); message matched to the ad.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "template-client-acquisition-pages-campaign-landing-page",
       "name": "Campaign landing page",
       "layer": "template",
       "category": "client-acquisition-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-alert-notification-banner"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "template-client-acquisition-pages-grant-funding-led-landing-page",
       "name": "Grant/funding-led landing page",
       "layer": "template",
       "category": "client-acquisition-pages",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Generic funding framing only — scheme names and eligibility copy live in the consuming project.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "template-client-acquisition-pages-lead-magnet-landing-page",
       "name": "Lead magnet landing page",
       "layer": "template",
       "category": "client-acquisition-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-conversion-sections-lead-magnet-download-form"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "template-client-acquisition-pages-quote-request-page",
       "name": "Quote request page",
       "layer": "template",
       "category": "client-acquisition-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-conversion-sections-detailed-quote-form"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "template-client-acquisition-pages-booking-page",
@@ -4033,7 +4096,7 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Blocked on the booking/availability widget (deferred — external booking data).",
       "filePath": "",
       "examplesPath": ""
     },
@@ -4042,39 +4105,42 @@
       "name": "Event or promotion page",
       "layer": "template",
       "category": "client-acquisition-pages",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "template-client-acquisition-pages-comparison-landing-page",
       "name": "Comparison landing page",
       "layer": "template",
       "category": "client-acquisition-pages",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Card-based comparison via the packages pattern; true comparison table stays needs-a11y-review.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "template-client-acquisition-pages-local-seo-landing-page",
       "name": "Local SEO landing page",
       "layer": "template",
       "category": "client-acquisition-pages",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "organism-hero-sections-local-area-hero",
+        "organism-service-sections-postcode-town-coverage-section"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/templates/contact-and-conversion.html"
     },
     {
       "id": "page-starters-local-trade-service-business-starter",

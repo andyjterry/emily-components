@@ -1,0 +1,134 @@
+<!-- emily-components/templates: service pages
+     Chrome (skip link, header, footer): see templates/marketing.html Homepage.
+     Each template = <main> section order composed from organisms/. -->
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Services index
+     Order: hero → featured services → full services grid → process
+            → coverage → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Services</span>
+      <h1 class="hero-title">Everything we do</h1>
+      <p class="hero-lead">One sentence about the breadth of the offering.</p>
+    </div>
+  </section>
+
+  <!-- organisms/services.html → featured services -->
+  <!-- patterns/cards.html → service card grid (all services) -->
+  <!-- organisms/services.html → process/how-it-works -->
+  <!-- organisms/services.html → service area list -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Single service page
+     Order: service hero (breadcrumb) → service intro → problem/solution
+            → common issues → pricing/packages → how-it-works → FAQ items
+            → related services → detailed quote form → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <!-- organisms/heroes.html → service page hero (with breadcrumb) -->
+  <section class="section-lg">
+    <div class="width-container">
+      <nav aria-label="Breadcrumb">
+        <ol class="inline-list text-sm">
+          <li><a class="text-neutral-80" href="/">Home</a> <span class="text-neutral-60" aria-hidden="true">/</span></li>
+          <li><a class="text-neutral-80" href="/services">Services</a> <span class="text-neutral-60" aria-hidden="true">/</span></li>
+          <li><span class="text-neutral-90 font-semibold" aria-current="page">Service name</span></li>
+        </ol>
+      </nav>
+      <h1 class="hero-title">Service name</h1>
+      <p class="hero-lead">What it is, who it is for, the outcome.</p>
+      <a class="btn btn-primary btn-lg" href="#quote">Get a quote for this service</a>
+    </div>
+  </section>
+
+  <!-- organisms/services.html → service intro section -->
+  <!-- organisms/services.html → problem/solution blocks -->
+  <!-- organisms/services.html → common issues section -->
+  <!-- organisms/services.html → packages/pricing section -->
+  <!-- organisms/services.html → process/how-it-works -->
+  <!-- molecules/content.html → FAQ items (2–4, service-specific) -->
+  <!-- organisms/services.html → related services section -->
+  <!-- organisms/conversion.html → detailed quote form, anchored -->
+  <section class="section" id="quote" aria-label="Quote request">
+    <div class="width-container">
+      <!-- detailed quote form here -->
+    </div>
+  </section>
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Service-area index
+     Order: hero → coverage section → area link grid → local proof → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Coverage</span>
+      <h1 class="hero-title">Areas we cover</h1>
+      <p class="hero-lead">The catchment in one sentence.</p>
+    </div>
+  </section>
+
+  <!-- organisms/services.html → service area list / postcode coverage -->
+  <section class="section">
+    <div class="width-container stack-lg">
+      <ul class="inline-list">
+        <li><a class="badge" href="/areas/town-one">Town one</a></li>
+        <li><a class="badge" href="/areas/town-two">Town two</a></li>
+        <!-- + more area links -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- organisms/trust.html → local proof section -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Single location/service-area page
+     Order: local area hero → services grid (local framing) → local proof
+            → testimonials grid (local) → coverage list → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <!-- organisms/heroes.html → local area hero -->
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Serving Placeholder Town</span>
+      <h1 class="hero-title">Service type in Placeholder Town</h1>
+      <p class="hero-lead">Local availability, response time, nearby areas.</p>
+      <a class="btn btn-primary btn-lg" href="#contact">Check availability</a>
+    </div>
+  </section>
+
+  <!-- patterns/cards.html → service card grid -->
+  <!-- organisms/trust.html → local proof section -->
+  <!-- organisms/trust.html → testimonials grid (local reviews) -->
+  <!-- organisms/services.html → postcode/town coverage -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Pricing/packages page
+     Order: hero → packages section → maintenance plan → payment options
+            → FAQ items (pricing) → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Pricing</span>
+      <h1 class="hero-title">Clear prices, no surprises</h1>
+      <p class="hero-lead">How pricing works here, in one sentence.</p>
+    </div>
+  </section>
+
+  <!-- organisms/services.html → packages/pricing section -->
+  <!-- organisms/services.html → maintenance plan section -->
+  <!-- organisms/services.html → payment/finance options block -->
+  <!-- molecules/content.html → FAQ items (pricing questions) -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>

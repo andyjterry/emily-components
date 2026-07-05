@@ -1,0 +1,175 @@
+<!-- emily-components/templates: contact & conversion pages
+     Chrome: see templates/marketing.html Homepage. Landing pages typically use
+     a minimal header (logo + phone only, no nav) to cut exits.
+     Not templated: booking page (blocked on deferred booking widget). -->
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Contact page
+     Order: hero → contact choice cards → short enquiry form + details split
+            → opening hours → coverage
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Contact</span>
+      <h1 class="hero-title">Get in touch</h1>
+      <p class="hero-lead">Response expectation in one sentence.</p>
+    </div>
+  </section>
+
+  <!-- organisms/conversion.html → contact choice cards -->
+  <!-- organisms/conversion.html → short enquiry form, split with: -->
+  <!-- organisms/informational.html → contact details + opening hours -->
+  <section class="section" id="contact">
+    <div class="width-container split">
+      <!-- short enquiry form here -->
+      <aside class="card stack-sm" aria-label="Direct contact details">
+        <h2 class="text-xl font-semibold">Prefer to talk?</h2>
+        <p class="text-neutral-60"><a class="text-brand-80 font-semibold" href="tel:+441234567890">01234 567 890</a></p>
+        <p class="text-neutral-60">Mon–Fri, 8am–6pm</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- organisms/services.html → service area list -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Quote request page
+     Order: minimal hero → detailed quote form → trust strip → FAQ items
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section">
+    <div class="width-container">
+      <h1 class="hero-title">Request a quote</h1>
+      <p class="hero-lead">Free, written, no obligation.</p>
+    </div>
+  </section>
+
+  <!-- organisms/conversion.html → detailed quote form -->
+  <!-- patterns/trust-strip.html → text badge strip -->
+  <!-- molecules/content.html → FAQ items (quote process) -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Thank-you page
+     Order: thank-you confirmation panel → related links. noindex.
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <!-- organisms/conversion.html → thank-you confirmation panel -->
+  <!-- organisms/informational.html → related articles / internal link cluster -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: PPC landing page
+     Chrome: minimal header (logo + phone, no nav). Single conversion goal.
+     Order: campaign hero → trust strip → problem/solution → testimonials
+            → detailed quote form → mobile sticky call button
+     ══════════════════════════════════════════════════════════════════ -->
+<header class="py-4 border-b border-neutral-20">
+  <div class="width-container cluster-between">
+    <a class="text-xl font-bold text-neutral-90 no-underline" href="/">Business Name</a>
+    <a class="btn btn-primary btn-sm" href="tel:+441234567890">01234 567 890</a>
+  </div>
+</header>
+<main id="main">
+  <!-- organisms/heroes.html → campaign/PPC hero (message-matched to the ad) -->
+  <!-- patterns/trust-strip.html → text badge strip -->
+  <!-- organisms/services.html → problem/solution blocks -->
+  <!-- organisms/trust.html → testimonials grid -->
+  <!-- organisms/conversion.html → detailed quote form, anchored as #form -->
+  <!-- organisms/conversion.html → mobile sticky call button -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Campaign landing page
+     As PPC landing; hero copy tied to one campaign message; add urgency
+     via alert banner if the offer is time-limited.
+     Order: alert (offer window) → campaign hero → proof → form
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-sm">
+    <div class="width-container">
+      <div class="alert alert-info"><p><strong>Offer:</strong> valid until DATE.</p></div>
+    </div>
+  </section>
+  <!-- then as PPC landing page -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Grant/funding-led landing page
+     Generic funding framing only — scheme names and eligibility copy belong
+     to the consuming project, never this template.
+     Order: landing hero (funding angle) → eligibility checklist →
+            how-it-works → warning/advice (deadlines) → short enquiry form
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <section class="section-lg">
+    <div class="width-container">
+      <span class="eyebrow">Funding available</span>
+      <h1 class="hero-title">Funding may cover part of this work</h1>
+      <p class="hero-lead">Who typically qualifies, in one plain sentence.</p>
+      <a class="btn btn-primary btn-lg" href="#check">Check if you qualify</a>
+    </div>
+  </section>
+
+  <!-- organisms/informational.html → checklist section (eligibility) -->
+  <!-- organisms/services.html → process/how-it-works (application steps) -->
+  <!-- organisms/informational.html → warning/advice block (deadlines/limits) -->
+  <!-- organisms/conversion.html → short enquiry form, anchored as #check -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Lead magnet landing page
+     Order: landing hero (the asset) → lead magnet form → what's inside
+            checklist → testimonials
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <!-- organisms/heroes.html → landing page hero (the guide as the offer) -->
+  <!-- organisms/conversion.html → lead magnet/download form -->
+  <!-- organisms/informational.html → checklist section (what is inside) -->
+  <!-- organisms/trust.html → testimonials grid -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Event or promotion page
+     Order: campaign hero (date-led) → alert (capacity/date) → details split
+            → how-it-works → short enquiry/booking-by-form → CTA band
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <!-- organisms/heroes.html → campaign hero with the date in the headline -->
+  <!-- molecules/content.html → alert (limited places / closing date) -->
+  <!-- organisms/informational.html → text and image section (event details) -->
+  <!-- organisms/conversion.html → short enquiry form (register interest) -->
+  <!-- patterns/cta-band.html → CTA band -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Comparison landing page
+     Card-based comparison (packages pattern). A true side-by-side
+     comparison table stays needs-a11y-review in the manifest.
+     Order: landing hero → packages/pricing (as comparison cards)
+            → problem/solution → FAQ items → quote form
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <!-- organisms/heroes.html → landing page hero (the comparison question) -->
+  <!-- organisms/services.html → packages/pricing section (option cards) -->
+  <!-- organisms/services.html → problem/solution blocks (when each option fits) -->
+  <!-- molecules/content.html → FAQ items -->
+  <!-- organisms/conversion.html → short enquiry form -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TEMPLATE: Local SEO landing page
+     As single location page, tuned for one service + one place.
+     Order: local area hero → service intro (local framing) → local proof
+            → testimonials (local) → coverage → detailed quote form
+     ══════════════════════════════════════════════════════════════════ -->
+<main id="main">
+  <!-- organisms/heroes.html → local area hero (service + town in h1) -->
+  <!-- organisms/services.html → service intro section -->
+  <!-- organisms/trust.html → local proof section -->
+  <!-- organisms/trust.html → testimonials grid -->
+  <!-- organisms/services.html → postcode/town coverage -->
+  <!-- organisms/conversion.html → detailed quote form -->
+</main>
