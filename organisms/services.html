@@ -1,0 +1,198 @@
+<!-- emily-components/organisms: services
+     Service listing, pricing, process and coverage sections.
+     Not built: comparison table (needs-a11y-review). -->
+
+<!-- Services grid: see patterns/cards.html for the canonical version -->
+
+<!-- Featured services: lead card + supporting grid -->
+<section class="section" aria-labelledby="fs-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="fs-heading">Most requested</h2>
+    <div class="card card-hover stack-sm relative">
+      <span class="tag">Most popular</span>
+      <h3 class="text-2xl font-semibold">
+        <a class="text-neutral-90 no-underline" href="/services/flagship">Flagship service<span class="absolute inset-0" aria-hidden="true"></span></a>
+      </h3>
+      <p class="text-neutral-60">Why this is the one most customers ask for.</p>
+    </div>
+    <div class="grid-auto">
+      <article class="card card-hover stack-sm relative">
+        <h3 class="text-xl font-semibold"><a class="text-neutral-90 no-underline" href="/services/two">Second service<span class="absolute inset-0" aria-hidden="true"></span></a></h3>
+        <p class="text-neutral-60">Short description.</p>
+      </article>
+      <article class="card card-hover stack-sm relative">
+        <h3 class="text-xl font-semibold"><a class="text-neutral-90 no-underline" href="/services/three">Third service<span class="absolute inset-0" aria-hidden="true"></span></a></h3>
+        <p class="text-neutral-60">Short description.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Service intro section -->
+<section class="section" aria-labelledby="si-heading">
+  <div class="width-container stack content-wide">
+    <h2 class="text-3xl font-semibold" id="si-heading">About this service</h2>
+    <p class="text-neutral-60">Two or three sentences: what it involves, when it is needed, what the customer gets at the end.</p>
+  </div>
+</section>
+
+<!-- Problem/solution blocks -->
+<section class="section" aria-labelledby="ps-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="ps-heading">Sound familiar?</h2>
+    <div class="grid-auto">
+      <div class="card stack-sm">
+        <h3 class="text-lg font-semibold">The problem</h3>
+        <p class="text-neutral-60">Symptom the customer recognises, in their words.</p>
+        <hr class="divider" style="margin-block: 0.5rem">
+        <h3 class="text-lg font-semibold text-brand-80">What we do</h3>
+        <p class="text-neutral-60">The fix, stated plainly.</p>
+      </div>
+      <div class="card stack-sm">
+        <h3 class="text-lg font-semibold">The problem</h3>
+        <p class="text-neutral-60">Second common symptom.</p>
+        <hr class="divider" style="margin-block: 0.5rem">
+        <h3 class="text-lg font-semibold text-brand-80">What we do</h3>
+        <p class="text-neutral-60">The fix.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Common issues section -->
+<section class="section" aria-labelledby="ci-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="ci-heading">Common issues we fix</h2>
+    <ul class="grid-auto-sm list-none pl-0">
+      <li class="card">Issue one</li>
+      <li class="card">Issue two</li>
+      <li class="card">Issue three</li>
+      <li class="card">Issue four</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Maintenance plan section -->
+<section class="section" aria-labelledby="mp-heading">
+  <div class="width-container split card" style="align-items: center">
+    <div class="stack-sm">
+      <h2 class="text-2xl font-semibold" id="mp-heading">Annual maintenance plan</h2>
+      <p class="text-neutral-60">What the plan includes and what it prevents.</p>
+      <ul class="stack-sm pl-6 list-disc text-neutral-80">
+        <li>Yearly service visit</li>
+        <li>Priority call-outs</li>
+        <li>Discounted repairs</li>
+      </ul>
+    </div>
+    <div class="stack-sm" style="text-align: center">
+      <p><span class="text-4xl font-bold text-neutral-90">£9</span> <span class="text-neutral-60">/ month</span></p>
+      <a class="btn btn-primary" href="/maintenance">Join the plan</a>
+    </div>
+  </div>
+</section>
+
+<!-- Packages/pricing section -->
+<section class="section" aria-labelledby="pp-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="pp-heading">Packages</h2>
+    <div class="grid-auto">
+      <article class="card stack-sm">
+        <h3 class="text-xl font-semibold">Essential</h3>
+        <p><span class="text-3xl font-bold text-neutral-90">£99</span></p>
+        <ul class="stack-sm pl-6 list-disc text-neutral-80">
+          <li>What is included</li>
+          <li>And included</li>
+        </ul>
+        <a class="btn btn-secondary w-full" href="/quote?package=essential">Choose Essential</a>
+      </article>
+      <article class="card stack-sm" style="border-color: var(--color-brand); border-width: 2px">
+        <span class="tag">Most popular</span>
+        <h3 class="text-xl font-semibold">Standard</h3>
+        <p><span class="text-3xl font-bold text-neutral-90">£199</span></p>
+        <ul class="stack-sm pl-6 list-disc text-neutral-80">
+          <li>Everything in Essential</li>
+          <li>Plus this</li>
+        </ul>
+        <a class="btn btn-primary w-full" href="/quote?package=standard">Choose Standard</a>
+      </article>
+      <article class="card stack-sm">
+        <h3 class="text-xl font-semibold">Complete</h3>
+        <p><span class="text-3xl font-bold text-neutral-90">£299</span></p>
+        <ul class="stack-sm pl-6 list-disc text-neutral-80">
+          <li>Everything in Standard</li>
+          <li>Plus this</li>
+        </ul>
+        <a class="btn btn-secondary w-full" href="/quote?package=complete">Choose Complete</a>
+      </article>
+    </div>
+    <p class="text-sm text-neutral-60">All prices include materials unless stated. Written quote before any work starts.</p>
+  </div>
+</section>
+
+<!-- Process / how it works -->
+<section class="section" aria-labelledby="hw-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="hw-heading">How it works</h2>
+    <ol class="stack-lg list-none pl-0">
+      <li class="media-object">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-80 text-light font-bold" aria-hidden="true">1</span>
+        <div><h3 class="text-lg font-semibold">Tell us about the job</h3><p class="text-neutral-60">Form or phone, two minutes.</p></div>
+      </li>
+      <li class="media-object">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-80 text-light font-bold" aria-hidden="true">2</span>
+        <div><h3 class="text-lg font-semibold">Get a written quote</h3><p class="text-neutral-60">Fixed price, no surprises.</p></div>
+      </li>
+      <li class="media-object">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-80 text-light font-bold" aria-hidden="true">3</span>
+        <div><h3 class="text-lg font-semibold">Job done and checked</h3><p class="text-neutral-60">Signed off with you, guaranteed in writing.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Related services section -->
+<section class="section-sm" aria-labelledby="rs-heading">
+  <div class="width-container stack">
+    <h2 class="text-2xl font-semibold" id="rs-heading">Related services</h2>
+    <ul class="inline-list">
+      <li><a class="btn btn-ghost" href="/services/related-1">Related service one →</a></li>
+      <li><a class="btn btn-ghost" href="/services/related-2">Related service two →</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Service area list / postcode coverage -->
+<section class="section" aria-labelledby="sa-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="sa-heading">Areas we cover</h2>
+    <ul class="inline-list">
+      <li><a class="badge" href="/areas/town-one">Town one</a></li>
+      <li><a class="badge" href="/areas/town-two">Town two</a></li>
+      <li><a class="badge" href="/areas/town-three">Town three</a></li>
+      <li><a class="badge" href="/areas/town-four">Town four</a></li>
+    </ul>
+    <p class="text-neutral-60">Postcodes: AB1, AB2, CD3, CD4 and surrounding areas. Not sure? <a class="text-brand-80 underline" href="/contact">Ask us.</a></p>
+  </div>
+</section>
+
+<!-- Emergency service section -->
+<section class="section" aria-labelledby="em-heading">
+  <div class="width-container card stack" style="border-left: 4px solid var(--color-error)">
+    <h2 class="text-2xl font-semibold" id="em-heading">Emergencies</h2>
+    <p class="text-neutral-60">What counts as an emergency, response time, and out-of-hours rates stated up front.</p>
+    <a class="btn btn-danger btn-lg" href="tel:+441234567890">Call the emergency line now</a>
+  </div>
+</section>
+
+<!-- Payment/finance options block -->
+<section class="section-sm" aria-labelledby="pf-heading">
+  <div class="width-container card stack-sm">
+    <h2 class="text-2xl font-semibold" id="pf-heading">Ways to pay</h2>
+    <p class="text-neutral-60">Card, transfer, or staged payments on larger jobs — agreed in the quote.</p>
+    <ul class="trust-strip" style="justify-content: flex-start">
+      <li><span class="badge">Card</span></li>
+      <li><span class="badge">Bank transfer</span></li>
+      <li><span class="badge">Staged payments</span></li>
+    </ul>
+  </div>
+</section>

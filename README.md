@@ -16,7 +16,7 @@ tokens / ions → manifest → atoms → molecules → organisms → templates �
 - **`component-manifest.json`** is the exhaustive map of the whole system — every layer, every planned component. The manifest is the source of truth for what exists and what is blocked; it is *not* the implementation scope. Implementation is phased.
 - **Atoms** (`atoms/`) — built.
 - **Molecules** (`molecules/`) — built where no JS/a11y-review blocker exists.
-- **Organisms** depend on molecules.
+- **Organisms** (`organisms/`) — built where no JS/a11y-review blocker exists.
 - **Templates, pages and starters** come after that.
 - The browsable **catalogue** comes last.
 
@@ -86,6 +86,22 @@ Atoms not yet buildable are tracked in the manifest as `needs-css`, `needs-js`, 
 | `molecules/content.html` | Alert variants, process step, FAQ item (details/summary), breadcrumb, pagination, share links, related link |
 
 Still blocked: toggle row (`needs-css`), tab item/cookie banner/back-to-top/upload previews (`needs-js`), accordion/rating stars/multi-step progress (`needs-a11y-review`), review card (blocked on rating stars).
+
+## Organisms
+
+`organisms/` composes molecules into full page sections.
+
+| File | Contents |
+|---|---|
+| `organisms/navigation.html` | Utility top bar, sticky header, emergency bar, mobile bottom CTA bar, multi-column/newsletter footers |
+| `organisms/heroes.html` | Homepage, service, local-area, landing, campaign, centred, split, trust-badge, review-proof, quote-form, availability heroes |
+| `organisms/conversion.html` | Split CTA, floating/sticky call buttons, callback section, short enquiry + detailed quote forms, contact choice cards, lead magnet, thank-you panel |
+| `organisms/trust.html` | Testimonials grid, insurance/warranty blocks, founder/team sections, local proof, credibility blocks |
+| `organisms/services.html` | Featured services, problem/solution, pricing packages, how-it-works, coverage, emergency, payment options |
+| `organisms/media-portfolio.html` | Gallery/masonry/portfolio grids, case study teaser + detail layout, video, alternating sections |
+| `organisms/informational.html` | Editorial prose, text+image, pull quote, FAQ (details/summary), checklist, downloads, blog grid, hours, contact details |
+
+Still blocked: dropdown/mega/drawer menus, carousels, lightbox, before/after slider, multi-step forms (`needs-js`); transparent header, comparison table, FAQ accordion sign-off (`needs-a11y-review`); booking widget, quote calculator, third-party embeds (`deferred`).
 
 ## Patterns
 

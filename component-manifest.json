@@ -41,10 +41,10 @@
     },
     "organism": {
       "total": 100,
-      "built": 13,
-      "planned": 70,
+      "built": 80,
       "needs-js": 9,
       "needs-a11y-review": 4,
+      "planned": 3,
       "deferred": 4
     },
     "template": {
@@ -2332,13 +2332,13 @@
       "name": "Header with utility top bar",
       "layer": "organism",
       "category": "navigation",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/navigation.html"
     },
     {
       "id": "organism-navigation-header-with-services-dropdown",
@@ -2384,13 +2384,13 @@
       "name": "Sticky header",
       "layer": "organism",
       "category": "navigation",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Ensure focus targets are not hidden beneath it (scroll-margin).",
+      "accessibilityNotes": "position: sticky utilities; give in-page targets scroll-margin so headings are not hidden beneath it.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/navigation.html"
     },
     {
       "id": "organism-navigation-transparent-over-hero-header",
@@ -2436,26 +2436,26 @@
       "name": "Mobile bottom CTA bar",
       "layer": "organism",
       "category": "navigation",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Fixed bottom bar, small screens only; page needs bottom padding so content is never obscured.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/navigation.html"
     },
     {
       "id": "organism-navigation-emergency-contact-bar",
       "name": "Emergency contact bar",
       "layer": "organism",
       "category": "navigation",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/navigation.html"
     },
     {
       "id": "organism-navigation-footer-simple",
@@ -2475,39 +2475,39 @@
       "name": "Footer multi-column",
       "layer": "organism",
       "category": "navigation",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/navigation.html"
     },
     {
       "id": "organism-navigation-footer-with-newsletter-signup",
       "name": "Footer with newsletter signup",
       "layer": "organism",
       "category": "navigation",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Plain form post; sr-only label on the email input.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/navigation.html"
     },
     {
       "id": "organism-navigation-footer-with-service-links",
       "name": "Footer with service links",
       "layer": "organism",
       "category": "navigation",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Shared example: the multi-column footer includes a labelled services nav column.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/navigation.html"
     },
     {
       "id": "organism-navigation-footer-with-legal-links",
@@ -2527,13 +2527,13 @@
       "name": "Footer with contact details and opening hours",
       "layer": "organism",
       "category": "navigation",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Shared example: the multi-column footer includes contact details and hours.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/navigation.html"
     },
     {
       "id": "organism-hero-sections-homepage-hero",
@@ -2556,52 +2556,54 @@
       "name": "Service page hero",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-breadcrumb-trail"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-hero-sections-local-area-hero",
       "name": "Local area hero",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-hero-sections-landing-page-hero",
       "name": "Landing page hero",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-hero-sections-campaign-ppc-hero",
       "name": "Campaign/PPC hero",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-hero-sections-full-bleed-image-hero",
@@ -2621,7 +2623,7 @@
       "name": "Text-and-image split hero",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-layout-primitives-split-layout"
       ],
@@ -2629,20 +2631,20 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-hero-sections-centred-text-hero",
       "name": "Centred text hero",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-hero-sections-hero-with-cta-pair",
@@ -2662,52 +2664,58 @@
       "name": "Hero with trust badges",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "atom-feedback-badge"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-hero-sections-hero-with-review-proof",
       "name": "Hero with review proof",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Rating stated as text, not star glyphs.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-hero-sections-hero-with-quote-form",
       "name": "Hero with quote form",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-form-molecules-form-field-label-hint-input-error"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-hero-sections-hero-with-availability-emergency-message",
       "name": "Hero with availability/emergency message",
       "layer": "organism",
       "category": "hero-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-alert-notification-banner"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/heroes.html"
     },
     {
       "id": "organism-conversion-sections-cta-banner",
@@ -2727,13 +2735,13 @@
       "name": "Split CTA section",
       "layer": "organism",
       "category": "conversion-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/conversion.html"
     },
     {
       "id": "organism-conversion-sections-sticky-cta-rail",
@@ -2753,39 +2761,41 @@
       "name": "Floating call button",
       "layer": "organism",
       "category": "conversion-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Must not obscure content or trap zoomed layouts.",
+      "accessibilityNotes": "Fixed position; verify it does not obscure content at high zoom. sr-only carries the full number.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/conversion.html"
     },
     {
       "id": "organism-conversion-sections-mobile-sticky-call-button",
       "name": "Mobile sticky call button",
       "layer": "organism",
       "category": "conversion-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/conversion.html"
     },
     {
       "id": "organism-conversion-sections-callback-request-section",
       "name": "Callback request section",
       "layer": "organism",
       "category": "conversion-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-form-molecules-radio-group"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/conversion.html"
     },
     {
       "id": "organism-conversion-sections-short-enquiry-form",
@@ -2800,20 +2810,24 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": "emily-components/patterns/forms.html"
+      "examplesPath": "emily-components/organisms/conversion.html"
     },
     {
       "id": "organism-conversion-sections-detailed-quote-form",
       "name": "Detailed quote form",
       "layer": "organism",
       "category": "conversion-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-form-molecules-form-field-label-hint-input-error",
+        "molecule-form-molecules-radio-group",
+        "molecule-form-molecules-fieldset-with-legend"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "Existing forms example is a short enquiry form only; detailed quote example outstanding.",
+      "accessibilityNotes": "Job specifics, urgency radio group, optional budget, grouped personal details. Fieldset styling needs formBase: true.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/conversion.html"
     },
     {
       "id": "organism-conversion-sections-multi-step-quote-form",
@@ -2846,13 +2860,15 @@
       "name": "Contact choice cards",
       "layer": "organism",
       "category": "conversion-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-contact-method-card"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/conversion.html"
     },
     {
       "id": "organism-conversion-sections-booking-availability-widget",
@@ -2872,26 +2888,28 @@
       "name": "Lead magnet/download form",
       "layer": "organism",
       "category": "conversion-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/conversion.html"
     },
     {
       "id": "organism-conversion-sections-thank-you-confirmation-panel",
       "name": "Thank-you confirmation panel",
       "layer": "organism",
       "category": "conversion-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-alert-notification-banner"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/conversion.html"
     },
     {
       "id": "organism-conversion-sections-quote-estimate-result-panel",
@@ -2911,7 +2929,7 @@
       "name": "Testimonials grid",
       "layer": "organism",
       "category": "trust-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "molecule-content-molecules-testimonial-card"
       ],
@@ -2919,7 +2937,7 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/trust.html"
     },
     {
       "id": "organism-trust-sections-testimonials-carousel",
@@ -3004,46 +3022,46 @@
       "name": "Insurance/guarantee block",
       "layer": "organism",
       "category": "trust-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/trust.html"
     },
     {
       "id": "organism-trust-sections-warranty-aftercare-block",
       "name": "Warranty/aftercare block",
       "layer": "organism",
       "category": "trust-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/trust.html"
     },
     {
       "id": "organism-trust-sections-founder-owner-credibility-section",
       "name": "Founder/owner credibility section",
       "layer": "organism",
       "category": "trust-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/trust.html"
     },
     {
       "id": "organism-trust-sections-team-section",
       "name": "Team section",
       "layer": "organism",
       "category": "trust-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-media-avatar"
       ],
@@ -3051,46 +3069,48 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/trust.html"
     },
     {
       "id": "organism-trust-sections-local-proof-section",
       "name": "Local proof section",
       "layer": "organism",
       "category": "trust-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-stat-block"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/trust.html"
     },
     {
       "id": "organism-trust-sections-public-sector-design-system-credibility-block",
       "name": "Public-sector/design-system credibility block",
       "layer": "organism",
       "category": "trust-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/trust.html"
     },
     {
       "id": "organism-trust-sections-accessibility-and-quality-assurance-block",
       "name": "Accessibility and quality assurance block",
       "layer": "organism",
       "category": "trust-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/trust.html"
     },
     {
       "id": "organism-service-sections-services-grid",
@@ -3113,78 +3133,85 @@
       "name": "Featured services",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-service-card",
+        "atom-feedback-tag"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-service-intro-section",
       "name": "Service intro section",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-problem-solution-blocks",
       "name": "Problem/solution blocks",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-common-issues-section",
       "name": "Common issues section",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-maintenance-plan-section",
       "name": "Maintenance plan section",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-price-tag"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-packages-pricing-section",
       "name": "Packages/pricing section",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-price-tag"
+      ],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Highlighted package uses border + tag, not colour alone.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-comparison-table",
@@ -3204,85 +3231,87 @@
       "name": "Process/how-it-works section",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-process-step"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-related-services-section",
       "name": "Related services section",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-service-area-list",
       "name": "Service area list",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-postcode-town-coverage-section",
       "name": "Postcode/town coverage section",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Shared example with service area list.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-emergency-service-section",
       "name": "Emergency service section",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-service-sections-payment-finance-options-block",
       "name": "Payment/finance options block",
       "layer": "organism",
       "category": "service-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-media-sections-gallery-grid",
       "name": "Gallery grid",
       "layer": "organism",
       "category": "media-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-media-gallery-thumbnail"
       ],
@@ -3290,20 +3319,20 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/media-portfolio.html"
     },
     {
       "id": "organism-media-sections-masonry-gallery",
       "name": "Masonry gallery",
       "layer": "organism",
       "category": "media-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
-      "filePath": "",
-      "examplesPath": ""
+      "accessibilityNotes": "Pure CSS columns; DOM order = reading order, which differs from visual column order — keep items order-independent.",
+      "filePath": "emily-css/src/generators/patterns.js",
+      "examplesPath": "emily-components/organisms/media-portfolio.html"
     },
     {
       "id": "organism-media-sections-lightbox-gallery",
@@ -3336,72 +3365,74 @@
       "name": "Recent work grid",
       "layer": "organism",
       "category": "media-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/media-portfolio.html"
     },
     {
       "id": "organism-media-sections-portfolio-grid",
       "name": "Portfolio grid",
       "layer": "organism",
       "category": "media-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Shared example with recent work grid.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/media-portfolio.html"
     },
     {
       "id": "organism-media-sections-case-study-teaser-section",
       "name": "Case study teaser section",
       "layer": "organism",
       "category": "media-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/media-portfolio.html"
     },
     {
       "id": "organism-media-sections-case-study-detail-layout",
       "name": "Case study detail layout",
       "layer": "organism",
       "category": "media-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "atom-layout-primitives-sidebar-layout"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/media-portfolio.html"
     },
     {
       "id": "organism-media-sections-project-facts-panel",
       "name": "Project facts panel",
       "layer": "organism",
       "category": "media-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/media-portfolio.html"
     },
     {
       "id": "organism-media-sections-video-section",
       "name": "Video section",
       "layer": "organism",
       "category": "media-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-media-video-embed"
       ],
@@ -3409,14 +3440,14 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/media-portfolio.html"
     },
     {
       "id": "organism-media-sections-image-text-alternating-section",
       "name": "Image/text alternating section",
       "layer": "organism",
       "category": "media-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-layout-primitives-split-layout"
       ],
@@ -3424,7 +3455,7 @@
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/media-portfolio.html"
     },
     {
       "id": "organism-informational-sections-faq-accordion",
@@ -3435,9 +3466,9 @@
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "details/summary first; verify AT announcement quality.",
+      "accessibilityNotes": "Example built with native details/summary; stays needs-a11y-review until AT announcement quality is manually verified.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-content-intro-block",
@@ -3457,20 +3488,20 @@
       "name": "Text-only editorial section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "CSS (.prose) exists; section-level editorial example outstanding.",
+      "accessibilityNotes": ".prose reading column.",
       "filePath": "emily-css/src/generators/patterns.js",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-text-and-image-section",
       "name": "Text and image section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [
         "atom-layout-primitives-split-layout"
       ],
@@ -3478,111 +3509,117 @@
       "states": [],
       "accessibilityNotes": "CSS (.split) exists; example currently shows text + card panel, image variant outstanding.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-pull-quote-section",
       "name": "Pull quote section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-numbered-process",
       "name": "Numbered process",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Shared example: the how-it-works ordered list.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/services.html"
     },
     {
       "id": "organism-informational-sections-checklist-section",
       "name": "Checklist section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
-      "accessibilityNotes": "",
+      "accessibilityNotes": "Check icons decorative; text carries meaning.",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-warning-advice-block",
       "name": "Warning/advice block",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-alert-notification-banner"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-download-resource-section",
       "name": "Download/resource section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-download-resource-item"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-blog-news-grid",
       "name": "Blog/news grid",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "molecule-content-molecules-blog-news-card"
+      ],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-related-articles-section",
       "name": "Related articles section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-internal-link-cluster",
       "name": "Internal link cluster",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-map-location-section",
@@ -3602,26 +3639,26 @@
       "name": "Opening hours section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "organism-informational-sections-contact-details-section",
       "name": "Contact details section",
       "layer": "organism",
       "category": "informational-sections",
-      "status": "planned",
+      "status": "built",
       "dependencies": [],
       "variants": [],
       "states": [],
       "accessibilityNotes": "",
       "filePath": "",
-      "examplesPath": ""
+      "examplesPath": "emily-components/organisms/informational.html"
     },
     {
       "id": "template-core-pages-homepage",

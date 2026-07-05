@@ -1,0 +1,120 @@
+<!-- emily-components/organisms: media & portfolio
+     Galleries and case study layouts. All static — lightbox gallery and
+     before/after slider stay needs-js. -->
+
+<!-- Gallery grid -->
+<section class="section" aria-labelledby="gg-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="gg-heading">Recent work</h2>
+    <ul class="grid-auto-sm list-none pl-0">
+      <li><img class="aspect-square object-cover w-full rounded-md" src="placeholder-1.jpg" alt="Describe the job shown"></li>
+      <li><img class="aspect-square object-cover w-full rounded-md" src="placeholder-2.jpg" alt="Describe the job shown"></li>
+      <li><img class="aspect-square object-cover w-full rounded-md" src="placeholder-3.jpg" alt="Describe the job shown"></li>
+      <li><img class="aspect-square object-cover w-full rounded-md" src="placeholder-4.jpg" alt="Describe the job shown"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Masonry gallery: pure CSS columns, no JS -->
+<section class="section" aria-labelledby="mg-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="mg-heading">Project gallery</h2>
+    <div class="masonry">
+      <img class="w-full rounded-md" src="placeholder-tall.jpg" alt="Describe the image">
+      <img class="w-full rounded-md" src="placeholder-wide.jpg" alt="Describe the image">
+      <img class="w-full rounded-md" src="placeholder-square.jpg" alt="Describe the image">
+      <img class="w-full rounded-md" src="placeholder-tall-2.jpg" alt="Describe the image">
+    </div>
+  </div>
+</section>
+
+<!-- Recent work / portfolio grid: images with captions and links -->
+<section class="section" aria-labelledby="pw-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="pw-heading">Portfolio</h2>
+    <div class="grid-auto">
+      <article class="card card-hover stack-sm relative">
+        <div class="card-media"><img class="aspect-3/2" src="placeholder-work.jpg" width="600" height="400" alt=""></div>
+        <h3 class="text-lg font-semibold"><a class="text-neutral-90 no-underline" href="/work/one">Project name<span class="absolute inset-0" aria-hidden="true"></span></a></h3>
+        <p class="text-sm text-neutral-60">Location · job type</p>
+      </article>
+      <article class="card card-hover stack-sm relative">
+        <div class="card-media"><img class="aspect-3/2" src="placeholder-work-2.jpg" width="600" height="400" alt=""></div>
+        <h3 class="text-lg font-semibold"><a class="text-neutral-90 no-underline" href="/work/two">Project name<span class="absolute inset-0" aria-hidden="true"></span></a></h3>
+        <p class="text-sm text-neutral-60">Location · job type</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Case study teaser section -->
+<section class="section" aria-labelledby="cst-heading">
+  <div class="width-container split card" style="align-items: center">
+    <img class="aspect-4/3 object-cover w-full rounded-md" src="placeholder-case.jpg" alt="">
+    <div class="stack-sm">
+      <span class="eyebrow">Case study</span>
+      <h2 class="text-2xl font-semibold" id="cst-heading">Outcome achieved for a real client</h2>
+      <p class="text-neutral-60">One paragraph: the problem, what was done, the measurable result.</p>
+      <a class="btn btn-secondary" href="/case-studies/example">Read the full case study</a>
+    </div>
+  </div>
+</section>
+
+<!-- Case study detail layout -->
+<article class="section">
+  <div class="width-container stack-lg">
+    <header class="stack-sm">
+      <span class="eyebrow">Case study</span>
+      <h1 class="hero-title">Project headline: the outcome</h1>
+      <p class="hero-lead">One-sentence summary of client, problem and result.</p>
+    </header>
+    <img class="aspect-video object-cover w-full rounded-md" src="placeholder-case-hero.jpg" alt="Finished project overview">
+    <div class="sidebar">
+      <!-- Project facts panel -->
+      <aside class="card stack-sm" aria-label="Project facts">
+        <h2 class="text-lg font-semibold">At a glance</h2>
+        <dl class="stack-sm">
+          <div><dt class="text-sm text-neutral-60">Location</dt><dd class="font-semibold text-neutral-90">Placeholder Town</dd></div>
+          <div><dt class="text-sm text-neutral-60">Duration</dt><dd class="font-semibold text-neutral-90">3 weeks</dd></div>
+          <div><dt class="text-sm text-neutral-60">Services</dt><dd class="font-semibold text-neutral-90">Service A, Service B</dd></div>
+        </dl>
+      </aside>
+      <div class="prose">
+        <h2>The problem</h2>
+        <p>What the client faced, in plain terms.</p>
+        <h2>What we did</h2>
+        <p>The approach and any decisions worth explaining.</p>
+        <h2>The result</h2>
+        <p>The measurable outcome and what the client said.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- Video section -->
+<section class="section" aria-labelledby="vs-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="vs-heading">See the work</h2>
+    <div class="aspect-video">
+      <iframe class="w-full h-full rounded-md" src="about:blank" title="Describe the video content" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Image/text alternating section -->
+<section class="section stack-xl" aria-label="Project highlights">
+  <div class="width-container split">
+    <img class="aspect-4/3 object-cover w-full rounded-md" src="placeholder-1.jpg" alt="Describe the image">
+    <div class="stack-sm">
+      <h2 class="text-2xl font-semibold">First highlight</h2>
+      <p class="text-neutral-60">Copy beside the image.</p>
+    </div>
+  </div>
+  <div class="width-container split">
+    <div class="stack-sm">
+      <h2 class="text-2xl font-semibold">Second highlight</h2>
+      <p class="text-neutral-60">Copy on the left this time — order swapped in source so it alternates naturally.</p>
+    </div>
+    <img class="aspect-4/3 object-cover w-full rounded-md" src="placeholder-2.jpg" alt="Describe the image">
+  </div>
+</section>

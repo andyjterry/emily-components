@@ -1,0 +1,187 @@
+<!-- emily-components/organisms: informational
+     Editorial, FAQ, process, and contact-detail sections.
+     FAQ uses native details/summary (no JS). Map embed stays deferred. -->
+
+<!-- Content intro block: see patterns/sections.html -->
+
+<!-- Text-only editorial section: constrained prose column -->
+<section class="section">
+  <div class="width-container">
+    <div class="prose">
+      <h2>Editorial heading</h2>
+      <p>Long-form copy set in a comfortable reading measure. Paragraphs, lists and quotes all get sensible spacing without extra classes.</p>
+      <ul>
+        <li>Point one</li>
+        <li>Point two</li>
+      </ul>
+      <p>Closing paragraph with a <a href="/next">link onward</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Text and image section -->
+<section class="section">
+  <div class="width-container split">
+    <div class="stack">
+      <h2 class="text-3xl font-semibold">Heading beside an image</h2>
+      <p class="text-neutral-60">Copy that the image supports. Collapses to a single column on mobile with the image after the text.</p>
+    </div>
+    <img class="aspect-4/3 object-cover w-full rounded-md" src="placeholder-context.jpg" alt="Describe what the image shows">
+  </div>
+</section>
+
+<!-- Pull quote section -->
+<section class="section-sm">
+  <div class="width-container">
+    <figure class="stack-sm content">
+      <blockquote class="text-2xl font-semibold text-neutral-90" style="border-left: 4px solid var(--color-brand); padding-left: 1rem">
+        <p>The single sentence worth stopping the page for.</p>
+      </blockquote>
+      <figcaption class="text-sm text-neutral-60">Who said it, and why they matter</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FAQ accordion (native details/summary — no JS) -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="faq-heading">Frequently asked questions</h2>
+    <div class="stack">
+      <details class="card">
+        <summary class="text-lg font-semibold cursor-pointer">How soon can you start?</summary>
+        <p class="text-neutral-60" style="margin-top: 0.75rem">Plain answer, two or three sentences.</p>
+      </details>
+      <details class="card">
+        <summary class="text-lg font-semibold cursor-pointer">Do you charge for quotes?</summary>
+        <p class="text-neutral-60" style="margin-top: 0.75rem">Plain answer.</p>
+      </details>
+      <details class="card">
+        <summary class="text-lg font-semibold cursor-pointer">Are you insured?</summary>
+        <p class="text-neutral-60" style="margin-top: 0.75rem">Plain answer.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Numbered process: see organisms/services.html "How it works" -->
+
+<!-- Checklist section -->
+<section class="section" aria-labelledby="cl-heading">
+  <div class="width-container stack-lg content-wide">
+    <h2 class="text-3xl font-semibold" id="cl-heading">What is included</h2>
+    <ul class="stack-sm list-none pl-0">
+      <li class="cluster" style="gap: 0.5rem">
+        <svg class="fill-current w-5 h-5 text-success-80" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M8 14l-4-4 1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>
+        <span class="text-neutral-80">Included item one</span>
+      </li>
+      <li class="cluster" style="gap: 0.5rem">
+        <svg class="fill-current w-5 h-5 text-success-80" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M8 14l-4-4 1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>
+        <span class="text-neutral-80">Included item two</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Warning/advice block -->
+<section class="section-sm">
+  <div class="width-container">
+    <div class="alert alert-warning content-wide">
+      <p><strong>Before you book:</strong> the one thing customers should check first, stated plainly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Download/resource section -->
+<section class="section" aria-labelledby="dr-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="dr-heading">Guides and documents</h2>
+    <div class="grid-auto">
+      <article class="card stack-sm">
+        <h3 class="text-lg font-semibold">Resource title</h3>
+        <p class="text-neutral-60">What it covers.</p>
+        <a class="btn btn-secondary" href="/files/guide.pdf" download>Download (PDF, 1.2 MB)</a>
+      </article>
+      <article class="card stack-sm">
+        <h3 class="text-lg font-semibold">Second resource</h3>
+        <p class="text-neutral-60">What it covers.</p>
+        <a class="btn btn-secondary" href="/files/checklist.pdf" download>Download (PDF, 300 KB)</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Blog/news grid -->
+<section class="section" aria-labelledby="bn-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="bn-heading">Latest articles</h2>
+    <div class="grid-auto">
+      <article class="card card-hover stack-sm relative">
+        <h3 class="text-xl font-semibold"><a class="text-neutral-90 no-underline" href="/blog/one">Article headline<span class="absolute inset-0" aria-hidden="true"></span></a></h3>
+        <p class="text-neutral-60">Standfirst.</p>
+        <p class="text-sm text-neutral-60"><time datetime="2026-07-01">1 July 2026</time></p>
+      </article>
+      <article class="card card-hover stack-sm relative">
+        <h3 class="text-xl font-semibold"><a class="text-neutral-90 no-underline" href="/blog/two">Second headline<span class="absolute inset-0" aria-hidden="true"></span></a></h3>
+        <p class="text-neutral-60">Standfirst.</p>
+        <p class="text-sm text-neutral-60"><time datetime="2026-06-20">20 June 2026</time></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Related articles section -->
+<section class="section-sm" aria-labelledby="ra-heading">
+  <div class="width-container stack">
+    <h2 class="text-2xl font-semibold" id="ra-heading">Related reading</h2>
+    <ul class="stack-sm list-none pl-0">
+      <li><a class="text-brand-80 font-semibold no-underline" href="/blog/related-1">Related article one <span aria-hidden="true">→</span></a></li>
+      <li><a class="text-brand-80 font-semibold no-underline" href="/blog/related-2">Related article two <span aria-hidden="true">→</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Internal link cluster -->
+<nav class="section-sm" aria-labelledby="il-heading">
+  <div class="width-container stack">
+    <h2 class="text-2xl font-semibold" id="il-heading">Explore</h2>
+    <ul class="inline-list">
+      <li><a class="badge" href="/services/one">Service one</a></li>
+      <li><a class="badge" href="/services/two">Service two</a></li>
+      <li><a class="badge" href="/areas/town">Town coverage</a></li>
+      <li><a class="badge" href="/faq">FAQs</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Opening hours section -->
+<section class="section-sm" aria-labelledby="oh-heading">
+  <div class="width-container card stack-sm" style="max-width: 24rem">
+    <h2 class="text-xl font-semibold" id="oh-heading">Opening hours</h2>
+    <dl class="stack-sm">
+      <div class="cluster-between"><dt class="text-neutral-60">Mon–Fri</dt><dd class="font-semibold text-neutral-90">8am–6pm</dd></div>
+      <div class="cluster-between"><dt class="text-neutral-60">Saturday</dt><dd class="font-semibold text-neutral-90">9am–1pm</dd></div>
+      <div class="cluster-between"><dt class="text-neutral-60">Sunday</dt><dd class="font-semibold text-neutral-90">Closed</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- Contact details section -->
+<section class="section" aria-labelledby="cd-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="cd-heading">Contact details</h2>
+    <div class="grid-auto">
+      <div class="stack-sm">
+        <h3 class="text-lg font-semibold">Phone</h3>
+        <p><a class="text-brand-80 font-semibold" href="tel:+441234567890">01234 567 890</a></p>
+      </div>
+      <div class="stack-sm">
+        <h3 class="text-lg font-semibold">Email</h3>
+        <p><a class="text-brand-80 font-semibold" href="mailto:hello@example.com">hello@example.com</a></p>
+      </div>
+      <div class="stack-sm">
+        <h3 class="text-lg font-semibold">Address</h3>
+        <p class="text-neutral-80">Street address<br>Town<br>Postcode</p>
+      </div>
+    </div>
+  </div>
+</section>

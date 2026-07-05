@@ -1,0 +1,210 @@
+<!-- emily-components/organisms: conversion
+     CTA sections and enquiry/quote forms. All plain HTML post targets — no JS.
+     Not built: multi-step quote form, photo-upload quote form (needs-js);
+     booking widget, quote estimate panel (deferred — external data/logic). -->
+
+<!-- CTA banner -->
+<section class="section">
+  <div class="width-container">
+    <div class="cta-band">
+      <h2 class="text-3xl font-semibold">Ready when you are</h2>
+      <p>One sentence removing the last doubt — free quotes, no obligation.</p>
+      <a class="btn btn-primary btn-lg" href="/quote">Request a quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- Split CTA section: message one side, actions the other -->
+<section class="section">
+  <div class="width-container split card" style="align-items: center">
+    <div class="stack-sm">
+      <h2 class="text-2xl font-semibold">Prefer to talk it through?</h2>
+      <p class="text-neutral-60">Call for a straight answer, or send the form and we will call you.</p>
+    </div>
+    <div class="button-group" style="justify-content: flex-end">
+      <a class="btn btn-primary" href="tel:+441234567890">Call now</a>
+      <a class="btn btn-secondary" href="#contact">Request a call back</a>
+    </div>
+  </div>
+</section>
+
+<!-- Floating call button: fixed, must not obscure content at 400% zoom -->
+<a class="btn btn-primary fixed z-40" style="right: 1rem; bottom: 1rem" href="tel:+441234567890">
+  Call<span class="sr-only"> 01234 567 890</span>
+</a>
+
+<!-- Mobile sticky call button: small screens only -->
+<a class="btn btn-primary w-full fixed bottom-0 inset-x-0 z-40 md:hidden" style="border-radius: 0" href="tel:+441234567890">
+  Call 01234 567 890
+</a>
+
+<!-- Callback request section -->
+<section class="section" aria-labelledby="cb-heading">
+  <div class="width-container split">
+    <div class="stack-sm">
+      <h2 class="text-3xl font-semibold" id="cb-heading">Request a call back</h2>
+      <p class="text-neutral-60">Leave a number and a good time — we do the chasing.</p>
+    </div>
+    <form class="card stack" method="post" action="/callback">
+      <div class="field-container" style="margin-bottom: 0">
+        <label for="cb-name">Full name</label>
+        <input class="input" id="cb-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field-container" style="margin-bottom: 0">
+        <label for="cb-phone">Phone number</label>
+        <input class="input" id="cb-phone" name="phone" type="tel" autocomplete="tel" required>
+      </div>
+      <fieldset>
+        <legend>Best time to call</legend>
+        <div class="radio-group">
+          <input class="radio" id="cb-am" name="time" type="radio" value="morning" checked>
+          <label for="cb-am">Morning</label>
+        </div>
+        <div class="radio-group">
+          <input class="radio" id="cb-pm" name="time" type="radio" value="afternoon">
+          <label for="cb-pm">Afternoon</label>
+        </div>
+      </fieldset>
+      <button class="btn btn-primary" type="submit">Request call back</button>
+    </form>
+  </div>
+</section>
+
+<!-- Short enquiry form -->
+<form class="stack" method="post" action="/contact" aria-label="Quick enquiry">
+  <div class="field-container">
+    <label for="se-name">Full name</label>
+    <input class="input" id="se-name" name="name" type="text" autocomplete="name" required>
+  </div>
+  <div class="field-container">
+    <label for="se-email">Email address</label>
+    <input class="input" id="se-email" name="email" type="email" autocomplete="email" required>
+  </div>
+  <div class="field-container">
+    <label for="se-message">Your message</label>
+    <textarea class="textarea" id="se-message" name="message" rows="4" required></textarea>
+  </div>
+  <div class="form-actions">
+    <button class="btn btn-primary" type="submit">Send enquiry</button>
+  </div>
+</form>
+
+<!-- Detailed quote form: job specifics, property, timing, budget, contact preference -->
+<form class="stack" method="post" action="/quote" aria-label="Detailed quote request">
+  <fieldset>
+    <legend>About the job</legend>
+    <div class="field-container">
+      <label for="dq-service">What do you need?</label>
+      <select class="select" id="dq-service" name="service" required>
+        <option value="">Choose the closest match</option>
+        <option value="repair">Repair</option>
+        <option value="install">New installation</option>
+        <option value="maintenance">Servicing / maintenance</option>
+        <option value="other">Something else</option>
+      </select>
+    </div>
+    <div class="field-container">
+      <label for="dq-details">Describe the job</label>
+      <p class="form-hint" id="dq-details-hint">Rough size, what is affected, and anything already tried.</p>
+      <textarea class="textarea" id="dq-details" name="details" rows="6" aria-describedby="dq-details-hint" required></textarea>
+    </div>
+    <div class="field-container">
+      <label for="dq-postcode">Postcode</label>
+      <input class="input" id="dq-postcode" name="postcode" type="text" autocomplete="postal-code" required style="max-width: 12rem">
+    </div>
+    <fieldset>
+      <legend>How urgent is it?</legend>
+      <div class="radio-group">
+        <input class="radio" id="dq-urgent" name="urgency" type="radio" value="urgent">
+        <label for="dq-urgent">Urgent — this week</label>
+      </div>
+      <div class="radio-group">
+        <input class="radio" id="dq-soon" name="urgency" type="radio" value="soon" checked>
+        <label for="dq-soon">Within a month</label>
+      </div>
+      <div class="radio-group">
+        <input class="radio" id="dq-planning" name="urgency" type="radio" value="planning">
+        <label for="dq-planning">Just planning</label>
+      </div>
+    </fieldset>
+    <div class="field-container">
+      <label for="dq-budget">Approximate budget <span class="text-neutral-60 font-normal">(optional)</span></label>
+      <input class="input" id="dq-budget" name="budget" type="text" inputmode="decimal" autocomplete="off" style="max-width: 12rem">
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Your details</legend>
+    <div class="field-container">
+      <label for="dq-name">Full name</label>
+      <input class="input" id="dq-name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="field-container">
+      <label for="dq-email">Email address</label>
+      <input class="input" id="dq-email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div class="field-container">
+      <label for="dq-phone">Phone number <span class="text-neutral-60 font-normal">(optional)</span></label>
+      <input class="input" id="dq-phone" name="phone" type="tel" autocomplete="tel">
+    </div>
+  </fieldset>
+  <div class="form-actions">
+    <button class="btn btn-primary btn-lg" type="submit">Request my quote</button>
+    <span class="text-sm text-neutral-60">Free, no obligation. We reply within one working day.</span>
+  </div>
+</form>
+
+<!-- Contact choice cards -->
+<section class="section" aria-label="Ways to contact us">
+  <div class="width-container grid-auto">
+    <article class="card stack-sm">
+      <h3 class="text-xl font-semibold">Call</h3>
+      <p class="text-neutral-60">Fastest for urgent jobs.</p>
+      <a class="btn btn-secondary" href="tel:+441234567890">01234 567 890</a>
+    </article>
+    <article class="card stack-sm">
+      <h3 class="text-xl font-semibold">Email</h3>
+      <p class="text-neutral-60">Good for photos and detail.</p>
+      <a class="btn btn-secondary" href="mailto:hello@example.com">hello@example.com</a>
+    </article>
+    <article class="card stack-sm">
+      <h3 class="text-xl font-semibold">Quote form</h3>
+      <p class="text-neutral-60">Two minutes, written reply.</p>
+      <a class="btn btn-primary" href="/quote">Start the form</a>
+    </article>
+  </div>
+</section>
+
+<!-- Lead magnet / download form -->
+<section class="section" aria-labelledby="lm-heading">
+  <div class="width-container split card" style="align-items: center">
+    <div class="stack-sm">
+      <h2 class="text-2xl font-semibold" id="lm-heading">Free guide: what this job really costs</h2>
+      <p class="text-neutral-60">What is in the guide and why it is worth an email address.</p>
+    </div>
+    <form class="stack-sm" method="post" action="/guide">
+      <div class="field-container" style="margin-bottom: 0">
+        <label for="lm-email">Email address</label>
+        <input class="input" id="lm-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <button class="btn btn-primary" type="submit">Send me the guide</button>
+      <p class="text-sm text-neutral-60">One email with the guide. No mailing list unless you opt in.</p>
+    </form>
+  </div>
+</section>
+
+<!-- Thank-you confirmation panel -->
+<section class="section" aria-labelledby="ty-heading">
+  <div class="width-container">
+    <div class="card stack" style="max-width: 36rem; margin-inline: auto">
+      <div class="alert alert-success">
+        <p><strong>Sent:</strong> your enquiry is on its way.</p>
+      </div>
+      <h1 class="text-3xl font-semibold" id="ty-heading">Thanks — we have your enquiry</h1>
+      <p class="text-neutral-60">What happens next and when to expect a reply. If it is urgent, call instead.</p>
+      <div class="button-group">
+        <a class="btn btn-secondary" href="tel:+441234567890">Call us</a>
+        <a class="btn btn-ghost" href="/">Back to the homepage</a>
+      </div>
+    </div>
+  </div>
+</section>

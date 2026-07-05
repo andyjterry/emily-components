@@ -1,0 +1,114 @@
+<!-- emily-components/organisms: navigation
+     Headers and footers composed from atoms + molecules. No JavaScript:
+     dropdown/mega/drawer menus stay needs-js in the manifest.
+     Skip link is always the first focusable element on the page. -->
+
+<!-- Header with utility top bar -->
+<div class="bg-neutral-10 py-2">
+  <div class="width-container cluster-between text-sm">
+    <span class="text-neutral-80">Mon–Fri 8am–6pm</span>
+    <a class="text-neutral-90 font-semibold" href="tel:+441234567890">01234 567 890</a>
+  </div>
+</div>
+<header class="py-4 border-b border-neutral-20">
+  <div class="width-container cluster-between">
+    <a class="text-xl font-bold text-neutral-90 no-underline" href="/">Business Name</a>
+    <nav aria-label="Main">
+      <ul class="inline-list">
+        <li><a class="text-neutral-80" href="/services">Services</a></li>
+        <li><a class="text-neutral-80" href="/about">About</a></li>
+        <li><a class="btn btn-primary btn-sm" href="/contact">Get a quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Sticky header: add scroll-margin to in-page targets so they are not hidden
+     beneath it (e.g. section { scroll-margin-top: 5rem } via utility or config) -->
+<header class="sticky top-0 z-40 bg-light border-b border-neutral-20 py-4">
+  <div class="width-container cluster-between">
+    <a class="text-xl font-bold text-neutral-90 no-underline" href="/">Business Name</a>
+    <nav aria-label="Main">
+      <ul class="inline-list">
+        <li><a class="text-neutral-80" href="#services">Services</a></li>
+        <li><a class="btn btn-primary btn-sm" href="#contact">Get a quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Emergency contact bar -->
+<div class="bg-neutral-90 py-2" role="region" aria-label="Emergency contact">
+  <div class="width-container cluster-between text-sm">
+    <span class="text-light font-semibold">24/7 emergency line</span>
+    <a class="text-light font-bold underline" href="tel:+441234567890">01234 567 890</a>
+  </div>
+</div>
+
+<!-- Mobile bottom CTA bar: fixed to the viewport bottom on small screens only.
+     Give the page bottom padding so content is never hidden behind it. -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-light border-t border-neutral-20 p-3 md:hidden">
+  <div class="cluster" style="justify-content: center; gap: 0.5rem">
+    <a class="btn btn-primary" href="tel:+441234567890">Call now</a>
+    <a class="btn btn-secondary" href="#contact">Get a quote</a>
+  </div>
+</div>
+
+<!-- Footer multi-column -->
+<footer class="section bg-neutral-10 border-t border-neutral-20">
+  <div class="width-container stack-lg">
+    <div class="grid-auto">
+      <div class="stack-sm">
+        <p class="font-semibold text-neutral-90">Business Name</p>
+        <p class="text-sm text-neutral-60">One line about what the business does and where.</p>
+      </div>
+      <nav aria-label="Services" class="stack-sm">
+        <p class="font-semibold text-neutral-90">Services</p>
+        <ul class="stack-sm list-none pl-0">
+          <li><a class="text-neutral-80" href="/services/one">Service one</a></li>
+          <li><a class="text-neutral-80" href="/services/two">Service two</a></li>
+          <li><a class="text-neutral-80" href="/services/three">Service three</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company" class="stack-sm">
+        <p class="font-semibold text-neutral-90">Company</p>
+        <ul class="stack-sm list-none pl-0">
+          <li><a class="text-neutral-80" href="/about">About</a></li>
+          <li><a class="text-neutral-80" href="/reviews">Reviews</a></li>
+          <li><a class="text-neutral-80" href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="stack-sm" aria-label="Contact details">
+        <p class="font-semibold text-neutral-90">Get in touch</p>
+        <p class="text-sm text-neutral-80"><a class="text-neutral-90 font-semibold" href="tel:+441234567890">01234 567 890</a></p>
+        <p class="text-sm text-neutral-60">Mon–Fri 8am–6pm<br>Sat 9am–1pm</p>
+        <p class="text-sm text-neutral-60">Street address, Town, Postcode</p>
+      </div>
+    </div>
+    <div class="cluster-between border-t border-neutral-20 pt-4">
+      <p class="text-sm text-neutral-60">© Business Name</p>
+      <nav aria-label="Legal">
+        <ul class="inline-list text-sm">
+          <li><a class="text-neutral-80" href="/privacy">Privacy</a></li>
+          <li><a class="text-neutral-80" href="/terms">Terms</a></li>
+          <li><a class="text-neutral-80" href="/accessibility">Accessibility</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Footer with newsletter signup: plain form post, no JS -->
+<footer class="section bg-neutral-10 border-t border-neutral-20">
+  <div class="width-container split">
+    <div class="stack-sm">
+      <p class="font-semibold text-neutral-90">Stay in the loop</p>
+      <p class="text-sm text-neutral-60">Occasional updates. Unsubscribe any time.</p>
+    </div>
+    <form class="cluster" method="post" action="/newsletter" style="gap: 0.5rem">
+      <label class="sr-only" for="nf-email">Email address</label>
+      <input class="input" id="nf-email" name="email" type="email" autocomplete="email" required style="max-width: 20rem">
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+    </form>
+  </div>
+</footer>

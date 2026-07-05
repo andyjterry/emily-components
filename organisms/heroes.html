@@ -1,0 +1,151 @@
+<!-- emily-components/organisms: heroes
+     One h1 per page. Compose inside .section-lg + .width-container.
+     Not built: full-bleed image hero and transparent-over-hero header
+     (needs-a11y-review: text-over-image contrast). -->
+
+<!-- Homepage hero (with CTA pair) -->
+<section class="section-lg">
+  <div class="width-container">
+    <span class="eyebrow">Trusted local service</span>
+    <h1 class="hero-title">A clear headline about the outcome you deliver</h1>
+    <p class="hero-lead">Who you help, where you work, and why people choose you.</p>
+    <div class="button-group">
+      <a class="btn btn-primary btn-lg" href="/quote">Get a free quote</a>
+      <a class="btn btn-secondary btn-lg" href="/services">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<!-- Service page hero -->
+<section class="section-lg">
+  <div class="width-container">
+    <nav aria-label="Breadcrumb">
+      <ol class="inline-list text-sm">
+        <li><a class="text-neutral-80" href="/">Home</a> <span class="text-neutral-60" aria-hidden="true">/</span></li>
+        <li><a class="text-neutral-80" href="/services">Services</a> <span class="text-neutral-60" aria-hidden="true">/</span></li>
+        <li><span class="text-neutral-90 font-semibold" aria-current="page">Service name</span></li>
+      </ol>
+    </nav>
+    <h1 class="hero-title">Service name</h1>
+    <p class="hero-lead">What this service is, who it is for, and the outcome it delivers.</p>
+    <a class="btn btn-primary btn-lg" href="#quote">Get a quote for this service</a>
+  </div>
+</section>
+
+<!-- Local area hero -->
+<section class="section-lg">
+  <div class="width-container">
+    <span class="eyebrow">Serving Placeholder Town</span>
+    <h1 class="hero-title">Service type in Placeholder Town</h1>
+    <p class="hero-lead">Local availability, response time, and the areas covered nearby.</p>
+    <a class="btn btn-primary btn-lg" href="#contact">Check availability</a>
+  </div>
+</section>
+
+<!-- Landing page hero: single message, single action -->
+<section class="section-lg">
+  <div class="width-container">
+    <h1 class="hero-title">One offer, stated plainly</h1>
+    <p class="hero-lead">The single benefit and who it applies to. No navigation distractions.</p>
+    <a class="btn btn-primary btn-lg" href="#form">Claim the offer</a>
+  </div>
+</section>
+
+<!-- Campaign/PPC hero: message-matched to the ad -->
+<section class="section-lg">
+  <div class="width-container">
+    <span class="eyebrow">Limited availability</span>
+    <h1 class="hero-title">Headline matching the ad the visitor clicked</h1>
+    <p class="hero-lead">Reinforce the same promise, then move straight to the action.</p>
+    <div class="button-group">
+      <a class="btn btn-primary btn-lg" href="#form">Get started</a>
+    </div>
+    <p class="text-sm text-neutral-60">No obligation · Reply within one working day</p>
+  </div>
+</section>
+
+<!-- Centred text hero -->
+<section class="section-lg">
+  <div class="width-container stack text-center" style="justify-items: center">
+    <h1 class="hero-title" style="margin-inline: auto">Centred statement headline</h1>
+    <p class="hero-lead" style="margin-inline: auto">Supporting sentence beneath, centred with a constrained measure.</p>
+    <p><a class="btn btn-primary btn-lg" href="/contact">Primary action</a></p>
+  </div>
+</section>
+
+<!-- Text-and-image split hero -->
+<section class="section-lg">
+  <div class="width-container split">
+    <div>
+      <span class="eyebrow">Trusted local service</span>
+      <h1 class="hero-title">Headline beside a supporting image</h1>
+      <p class="hero-lead">Lead copy on the left, image on the right; stacks on mobile.</p>
+      <a class="btn btn-primary btn-lg" href="/quote">Get a free quote</a>
+    </div>
+    <img class="aspect-4/3 object-cover w-full rounded-md" src="placeholder-work.jpg" alt="Describe what the image shows">
+  </div>
+</section>
+
+<!-- Hero with trust badges -->
+<section class="section-lg">
+  <div class="width-container stack-lg">
+    <div>
+      <h1 class="hero-title">Headline with proof directly underneath</h1>
+      <p class="hero-lead">Lead copy first, then the badges do the reassuring.</p>
+      <a class="btn btn-primary btn-lg" href="/quote">Get a free quote</a>
+    </div>
+    <ul class="trust-strip" style="justify-content: flex-start">
+      <li><span class="badge">Certified</span></li>
+      <li><span class="badge">Fully insured</span></li>
+      <li><span class="badge">Free quotes</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Hero with review proof -->
+<section class="section-lg">
+  <div class="width-container">
+    <h1 class="hero-title">Headline backed by customers</h1>
+    <p class="hero-lead">Lead copy as usual.</p>
+    <p class="text-neutral-80"><strong class="text-neutral-90">Rated 4.9 out of 5</strong> from 200+ local reviews</p>
+    <a class="btn btn-primary btn-lg" href="/quote">Get a free quote</a>
+  </div>
+</section>
+
+<!-- Hero with quote form -->
+<section class="section-lg">
+  <div class="width-container split">
+    <div>
+      <h1 class="hero-title">Headline beside the form</h1>
+      <p class="hero-lead">Shortest path from arrival to enquiry.</p>
+      <ul class="stack-sm pl-6 list-disc text-neutral-80">
+        <li>Proof point one</li>
+        <li>Proof point two</li>
+      </ul>
+    </div>
+    <form class="card stack" method="post" action="/quote" aria-labelledby="hq-title">
+      <h2 class="text-xl font-semibold" id="hq-title">Get a free quote</h2>
+      <div class="field-container" style="margin-bottom: 0">
+        <label for="hq-name">Full name</label>
+        <input class="input" id="hq-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field-container" style="margin-bottom: 0">
+        <label for="hq-phone">Phone number</label>
+        <input class="input" id="hq-phone" name="phone" type="tel" autocomplete="tel" required>
+      </div>
+      <button class="btn btn-primary" type="submit">Request a call back</button>
+    </form>
+  </div>
+</section>
+
+<!-- Hero with availability/emergency message -->
+<section class="section-lg">
+  <div class="width-container stack">
+    <div class="alert alert-success" style="max-width: 30rem">
+      <p><strong>Available today:</strong> emergency call-outs before 6pm.</p>
+    </div>
+    <h1 class="hero-title">Emergency service headline</h1>
+    <p class="hero-lead">What qualifies as an emergency and how fast you respond.</p>
+    <a class="btn btn-primary btn-lg" href="tel:+441234567890">Call the emergency line</a>
+  </div>
+</section>

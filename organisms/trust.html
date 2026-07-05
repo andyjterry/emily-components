@@ -1,0 +1,133 @@
+<!-- emily-components/organisms: trust
+     Proof sections composed from testimonial cards, badges, stats, avatars.
+     Not built: testimonials carousel (needs-js), review wall (blocked on review
+     card), Google reviews embed (deferred — third party). -->
+
+<!-- Testimonials grid -->
+<section class="section" aria-labelledby="tg-heading">
+  <div class="width-container stack-lg">
+    <div>
+      <span class="eyebrow">Reviews</span>
+      <h2 class="text-3xl font-semibold" id="tg-heading">What customers say</h2>
+    </div>
+    <div class="grid-auto">
+      <figure class="card stack-sm">
+        <blockquote><p class="text-neutral-80">“Short quote about the result.”</p></blockquote>
+        <figcaption><span class="font-semibold text-neutral-90">Customer name</span> <span class="block text-sm text-neutral-60">Town</span></figcaption>
+      </figure>
+      <figure class="card stack-sm">
+        <blockquote><p class="text-neutral-80">“Another quote, in the customer's words.”</p></blockquote>
+        <figcaption><span class="font-semibold text-neutral-90">Customer name</span> <span class="block text-sm text-neutral-60">Town</span></figcaption>
+      </figure>
+      <figure class="card stack-sm">
+        <blockquote><p class="text-neutral-80">“Third quote focused on reliability.”</p></blockquote>
+        <figcaption><span class="font-semibold text-neutral-90">Customer name</span> <span class="block text-sm text-neutral-60">Town</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Accreditation logo strip / trust badges: see patterns/trust-strip.html -->
+
+<!-- Insurance/guarantee block -->
+<section class="section-sm">
+  <div class="width-container split card" style="align-items: center">
+    <div class="stack-sm">
+      <h2 class="text-2xl font-semibold">Insured and guaranteed</h2>
+      <p class="text-neutral-60">Public liability cover and a written guarantee on all work.</p>
+    </div>
+    <ul class="trust-strip">
+      <li><span class="badge">£5m public liability</span></li>
+      <li><span class="badge">12-month guarantee</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Warranty/aftercare block -->
+<section class="section-sm">
+  <div class="width-container card stack-sm">
+    <h2 class="text-2xl font-semibold">After the job</h2>
+    <p class="text-neutral-60">What the warranty covers, for how long, and who to call if something is not right.</p>
+    <ul class="stack-sm pl-6 list-disc text-neutral-80">
+      <li>Workmanship guaranteed in writing</li>
+      <li>Manufacturer warranties registered for you</li>
+      <li>Aftercare line for the first 30 days</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Founder/owner credibility section -->
+<section class="section" aria-labelledby="fo-heading">
+  <div class="width-container split">
+    <img class="aspect-4/3 object-cover w-full rounded-md" src="placeholder-founder.jpg" alt="Founder name at work">
+    <div class="stack">
+      <h2 class="text-3xl font-semibold" id="fo-heading">Who you are dealing with</h2>
+      <p class="text-neutral-60">Founder background, years in the trade, and why the business runs the way it does. First person, plain language.</p>
+      <p class="font-semibold text-neutral-90">Founder name, owner</p>
+    </div>
+  </div>
+</section>
+
+<!-- Team section -->
+<section class="section" aria-labelledby="team-heading">
+  <div class="width-container stack-lg">
+    <h2 class="text-3xl font-semibold" id="team-heading">The team</h2>
+    <div class="grid-auto">
+      <div class="card stack-sm">
+        <img class="avatar avatar-lg" src="placeholder-face.jpg" alt="">
+        <p class="font-semibold text-neutral-90">Team member</p>
+        <p class="text-sm text-neutral-60">Role · qualification</p>
+      </div>
+      <div class="card stack-sm">
+        <img class="avatar avatar-lg" src="placeholder-face.jpg" alt="">
+        <p class="font-semibold text-neutral-90">Team member</p>
+        <p class="text-sm text-neutral-60">Role · qualification</p>
+      </div>
+      <div class="card stack-sm">
+        <img class="avatar avatar-lg" src="placeholder-face.jpg" alt="">
+        <p class="font-semibold text-neutral-90">Team member</p>
+        <p class="text-sm text-neutral-60">Role · qualification</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Local proof section -->
+<section class="section" aria-labelledby="lp-heading">
+  <div class="width-container stack-lg">
+    <div>
+      <span class="eyebrow">Local proof</span>
+      <h2 class="text-3xl font-semibold" id="lp-heading">Recent jobs near you</h2>
+    </div>
+    <div class="grid-auto">
+      <div class="stack-sm"><p class="text-4xl font-bold text-brand-80">120+</p><p class="text-neutral-60">jobs in Placeholder Town</p></div>
+      <div class="stack-sm"><p class="text-4xl font-bold text-brand-80">4.9/5</p><p class="text-neutral-60">average local rating</p></div>
+      <div class="stack-sm"><p class="text-4xl font-bold text-brand-80">1 day</p><p class="text-neutral-60">typical response</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Public-sector/design-system credibility block -->
+<section class="section-sm">
+  <div class="width-container card stack-sm">
+    <h2 class="text-2xl font-semibold">Built to recognised standards</h2>
+    <p class="text-neutral-60">Name the standards or frameworks the work follows and what that means for the client, in one sentence each.</p>
+    <ul class="trust-strip" style="justify-content: flex-start">
+      <li><span class="badge">Standard one</span></li>
+      <li><span class="badge">Standard two</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Accessibility and quality assurance block -->
+<section class="section-sm">
+  <div class="width-container card stack-sm">
+    <h2 class="text-2xl font-semibold">Accessibility and quality</h2>
+    <p class="text-neutral-60">The concrete checks every job goes through before sign-off — stated plainly, no logos required.</p>
+    <ul class="stack-sm pl-6 list-disc text-neutral-80">
+      <li>Checked against WCAG 2.2 AA where applicable</li>
+      <li>Tested with keyboard and screen reader</li>
+      <li>Signed off against a written checklist</li>
+    </ul>
+  </div>
+</section>
