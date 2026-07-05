@@ -1,0 +1,63 @@
+<!-- emily-components/atoms: media
+     Utilities: max-w-full, h-auto, aspect-*, object-cover, fill-current, w-/h- sizing.
+     Component classes: .avatar (with -sm/-lg).
+     Alt text rules: meaningful images describe content; decorative images use alt="";
+     icons next to text are aria-hidden. -->
+
+<!-- Responsive image: never overflows its container, no layout shift with dimensions set -->
+<img class="max-w-full h-auto rounded-md" src="placeholder-wide.jpg" width="1200" height="675" alt="Describe what the image shows">
+
+<!-- Fixed-ratio image: reserve the box, crop to fit -->
+<img class="aspect-video object-cover w-full rounded-md" src="placeholder-wide.jpg" alt="Describe what the image shows">
+<img class="aspect-square object-cover w-full rounded-md" src="placeholder-square.jpg" alt="">
+
+<!-- Avatar: name in alt, or alt="" when the name is printed alongside -->
+<img class="avatar avatar-sm" src="placeholder-face.jpg" alt="">
+<img class="avatar" src="placeholder-face.jpg" alt="">
+<img class="avatar avatar-lg" src="placeholder-face.jpg" alt="">
+
+<!-- Logo: height-constrained, alt is the organisation name -->
+<img class="h-12 w-auto" src="placeholder-logo.svg" alt="Organisation name">
+
+<!-- Icon (decorative, inherits text colour) -->
+<svg class="fill-current w-6 h-6" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+  <path d="M10 1l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
+</svg>
+
+<!-- SVG icon wrapper next to text: icon hidden, text carries meaning -->
+<span class="cluster" style="gap: 0.5rem">
+  <svg class="fill-current w-5 h-5 text-success-80" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M8 14l-4-4 1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>
+  <span>Fully insured</span>
+</span>
+
+<!-- Video embed: fixed ratio, iframe titled -->
+<div class="aspect-video">
+  <iframe class="w-full h-full rounded-md" src="about:blank" title="Describe the video content" allowfullscreen loading="lazy"></iframe>
+</div>
+
+<!-- Audio: native controls, transcript linked nearby -->
+<audio controls src="placeholder-audio.mp3"></audio>
+<p class="text-sm"><a class="text-brand-80 underline" href="/transcript">Read the transcript</a></p>
+
+<!-- Figure with caption: caption supplements the alt text, never repeats it -->
+<figure class="stack-sm">
+  <img class="max-w-full h-auto rounded-md" src="placeholder-work.jpg" width="800" height="600" alt="Describe what the image shows">
+  <figcaption class="text-sm text-neutral-60">Short caption adding context.</figcaption>
+</figure>
+
+<!-- Gallery thumbnail: square crop, link named for AT -->
+<a href="/gallery/item-1" aria-label="View project one full size">
+  <img class="aspect-square object-cover w-full rounded-md" src="placeholder-thumb.jpg" alt="">
+</a>
+
+<!-- Before / after: static labelled pair (interactive slider is a needs-js organism) -->
+<div class="grid-auto-sm">
+  <figure class="stack-sm">
+    <img class="aspect-4/3 object-cover w-full rounded-md" src="placeholder-before.jpg" alt="Condition before the work">
+    <figcaption class="text-sm font-semibold text-neutral-90">Before</figcaption>
+  </figure>
+  <figure class="stack-sm">
+    <img class="aspect-4/3 object-cover w-full rounded-md" src="placeholder-after.jpg" alt="Condition after the work">
+    <figcaption class="text-sm font-semibold text-neutral-90">After</figcaption>
+  </figure>
+</div>

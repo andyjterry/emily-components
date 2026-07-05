@@ -1,0 +1,110 @@
+<!-- emily-components/atoms: inputs
+     Classes: .input, .select, .textarea, .checkbox, .radio (emily-css @layer components).
+     Every control pairs with a visible <label>. Error state = aria-invalid="true"
+     plus .inline-error text linked via aria-describedby.
+     Not yet built: toggle/switch (needs-css), styled file upload (needs-css),
+     range slider styling (needs-css), address lookup (needs-js),
+     drag-and-drop upload (needs-js), quantity stepper (needs-js). See component-manifest.json. -->
+
+<!-- Text -->
+<label for="ex-name">Full name</label>
+<input class="input" id="ex-name" name="name" type="text" autocomplete="name">
+
+<!-- Email -->
+<label for="ex-email">Email address</label>
+<input class="input" id="ex-email" name="email" type="email" autocomplete="email">
+
+<!-- Phone -->
+<label for="ex-phone">Phone number</label>
+<input class="input" id="ex-phone" name="phone" type="tel" autocomplete="tel">
+
+<!-- Number -->
+<label for="ex-guests">Number of guests</label>
+<input class="input" id="ex-guests" name="guests" type="number" min="1" max="20">
+
+<!-- Password -->
+<label for="ex-password">Password</label>
+<input class="input" id="ex-password" name="password" type="password" autocomplete="new-password">
+
+<!-- URL -->
+<label for="ex-website">Website</label>
+<input class="input" id="ex-website" name="website" type="url" autocomplete="url">
+
+<!-- Search: place inside a role="search" landmark when it searches the site -->
+<label for="ex-search">Search</label>
+<input class="input" id="ex-search" name="q" type="search">
+
+<!-- Currency: symbol stays visible outside the field -->
+<label for="ex-budget">Budget (&pound;)</label>
+<input class="input" id="ex-budget" name="budget" type="text" inputmode="decimal" autocomplete="off">
+
+<!-- Postcode: generic, no country-specific pattern -->
+<label for="ex-postcode">Postcode</label>
+<input class="input" id="ex-postcode" name="postcode" type="text" autocomplete="postal-code">
+
+<!-- Date / time: native pickers, keyboard-accessible for free -->
+<label for="ex-date">Preferred date</label>
+<input class="input" id="ex-date" name="date" type="date">
+
+<label for="ex-time">Preferred time</label>
+<input class="input" id="ex-time" name="time" type="time">
+
+<label for="ex-datetime">Appointment</label>
+<input class="input" id="ex-datetime" name="appointment" type="datetime-local">
+
+<!-- Colour: native picker -->
+<label for="ex-colour">Brand colour</label>
+<input id="ex-colour" name="colour" type="color" value="#0f766e">
+
+<!-- Textarea -->
+<label for="ex-message">Your message</label>
+<textarea class="textarea" id="ex-message" name="message" rows="5"></textarea>
+
+<!-- Select -->
+<label for="ex-service">Service</label>
+<select class="select" id="ex-service" name="service">
+  <option value="">Choose a service</option>
+  <option value="a">Service A</option>
+  <option value="b">Service B</option>
+</select>
+
+<!-- Multi-select: native; show several rows so the multiplicity is visible -->
+<label for="ex-areas">Areas of interest (choose any)</label>
+<select class="select" id="ex-areas" name="areas" multiple size="4">
+  <option value="one">Option one</option>
+  <option value="two">Option two</option>
+  <option value="three">Option three</option>
+  <option value="four">Option four</option>
+</select>
+
+<!-- Checkbox -->
+<div class="checkbox-group">
+  <input class="checkbox" id="ex-updates" name="updates" type="checkbox">
+  <label for="ex-updates">Send me occasional updates</label>
+</div>
+
+<!-- Radio: group belongs in a fieldset with a legend (see patterns/forms.html) -->
+<div class="radio-group">
+  <input class="radio" id="ex-contact-email" name="contact" type="radio" value="email" checked>
+  <label for="ex-contact-email">Contact me by email</label>
+</div>
+<div class="radio-group">
+  <input class="radio" id="ex-contact-phone" name="contact" type="radio" value="phone">
+  <label for="ex-contact-phone">Contact me by phone</label>
+</div>
+
+<!-- Error state: aria-invalid drives the border, aria-describedby links the message -->
+<label for="ex-bad-email">Email address</label>
+<input class="input" id="ex-bad-email" name="email" type="email" aria-invalid="true" aria-describedby="ex-bad-email-error">
+<span class="inline-error" id="ex-bad-email-error">Enter an email address in the correct format, like name@example.com</span>
+
+<!-- Disabled -->
+<label for="ex-ref">Reference (assigned automatically)</label>
+<input class="input" id="ex-ref" name="ref" type="text" disabled value="Pending">
+
+<!-- Honeypot: hidden from everyone, ignored by AT and keyboard.
+     Server rejects submissions that fill it. -->
+<div aria-hidden="true" style="position: absolute; left: -9999px">
+  <label for="ex-company-website">Leave this field empty</label>
+  <input id="ex-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+</div>

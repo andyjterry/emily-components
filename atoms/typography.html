@@ -1,0 +1,70 @@
+<!-- emily-components/atoms: typography
+     Utilities (text-*, font-*) plus .prose for rich text and .eyebrow for kickers.
+     Colour comes from role tokens via utility classes — no hex values in markup.
+     Heading level = document structure; visual size = utility class. Never skip
+     levels to get a smaller font. -->
+
+<!-- Headings: semantic level with matching default sizes -->
+<h1 class="text-5xl font-bold text-neutral-90">Heading level one</h1>
+<h2 class="text-3xl font-semibold text-neutral-90">Heading level two</h2>
+<h3 class="text-2xl font-semibold text-neutral-90">Heading level three</h3>
+<h4 class="text-xl font-semibold text-neutral-90">Heading level four</h4>
+<h5 class="text-lg font-semibold text-neutral-90">Heading level five</h5>
+<h6 class="text-base font-semibold text-neutral-90">Heading level six</h6>
+
+<!-- Eyebrow / section kicker: sits above a heading, not a heading itself -->
+<span class="eyebrow">Our services</span>
+<h2 class="text-3xl font-semibold">What we can help with</h2>
+
+<!-- Lead paragraph -->
+<p class="text-xl text-neutral-60">A larger opening paragraph that summarises the section in one or two readable sentences.</p>
+
+<!-- Body, small, fine print, muted -->
+<p class="text-base text-neutral-80">Standard body text at the base size with comfortable line height.</p>
+<p class="text-sm text-neutral-80">Small text for secondary detail.</p>
+<p class="text-xs text-neutral-60">Fine print. Keep it above 12px equivalent and keep the contrast AA.</p>
+<p class="text-neutral-60">Muted text uses the text-muted role via neutral-60.</p>
+
+<!-- Strong / emphasis -->
+<p class="text-neutral-80">This is <strong class="text-neutral-90">important</strong> and this is <em>emphasised</em>.</p>
+
+<!-- Link: underlined inside prose so it is not colour-only -->
+<p class="text-neutral-80">Read the <a class="text-brand-80 underline" href="/guide">full guide</a> for details.</p>
+
+<!-- Rich text: .prose scopes readable defaults to CMS/editorial content -->
+<div class="prose">
+  <p>Prose gives paragraphs, lists, headings, links, quotes and code sensible reading styles in a constrained column.</p>
+  <ul>
+    <li>Unordered item one</li>
+    <li>Unordered item two</li>
+  </ul>
+  <ol>
+    <li>Ordered step one</li>
+    <li>Ordered step two</li>
+  </ol>
+  <blockquote>
+    <p>A short quotation set off from the main text.</p>
+  </blockquote>
+  <p>Inline <code>code</code> gets a subtle background and border.</p>
+</div>
+
+<!-- Definition list -->
+<dl class="stack-sm">
+  <dt class="font-semibold text-neutral-90">Response time</dt>
+  <dd class="text-neutral-60">Within one working day.</dd>
+  <dt class="font-semibold text-neutral-90">Coverage</dt>
+  <dd class="text-neutral-60">Placeholder region and surrounding areas.</dd>
+</dl>
+
+<!-- Pull quote: decorative treatment, real quote semantics -->
+<figure class="stack-sm">
+  <blockquote class="text-2xl font-semibold text-neutral-90" style="border-left: 4px solid var(--color-brand); padding-left: 1rem">
+    <p>One sentence worth pulling out of the page.</p>
+  </blockquote>
+  <figcaption class="text-sm text-neutral-60">Placeholder attribution</figcaption>
+</figure>
+
+<!-- Code block: scrollable region is keyboard-reachable -->
+<div class="code-window" tabindex="0" aria-label="Code example">
+  <pre><code><span class="token-keyword">const</span> greeting = <span class="token-string">'hello'</span>;</code></pre>
+</div>

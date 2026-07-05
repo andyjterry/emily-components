@@ -4,6 +4,24 @@
 
 Framework-agnostic HTML component patterns built on `emily-css`. Internal-first for now, written to package quality so it can become a public package later.
 
+## Build order
+
+The system grows in this order — each layer only depends on the layers before it:
+
+```text
+tokens / ions → manifest → atoms → molecules → organisms → templates → pages/starters → catalogue
+```
+
+- **Tokens** already exist in `emily-css` (colour scales, semantic roles, spacing, type, focus ring).
+- **`component-manifest.json`** is the exhaustive map of the whole system — every layer, every planned component. The manifest is the source of truth for what exists and what is blocked; it is *not* the implementation scope. Implementation is phased.
+- **Atoms** (`atoms/`) are the current build priority — built.
+- **Molecules** depend on atoms — next.
+- **Organisms** depend on molecules.
+- **Templates, pages and starters** come after that.
+- The browsable **catalogue** comes last.
+
+Brandbadger is the first consumer of this system, not its owner. Nothing in here carries client copy or business assumptions.
+
 ## What this is
 
 - Copy-paste HTML patterns. No build step, no framework, no runtime.
@@ -42,7 +60,24 @@ Patterns consume **semantic role tokens**, not raw palette steps. `emily-css` ge
 
 Override any role by declaring the same name in `semanticColours` in `emily.config.json` — user values win over the defaults.
 
+## Atoms
+
+`atoms/` holds the atom layer — the smallest usable pieces, one file per group. Each file shows variants, states, token usage and accessibility notes as comments.
+
+| File | Contents |
+|---|---|
+| `atoms/buttons.html` | Primary/secondary/ghost/link/danger, sizes, icon-only, loading, contact-channel and download buttons, button group |
+| `atoms/inputs.html` | All native input types, textarea, select, multi-select, checkbox, radio, error state, honeypot |
+| `atoms/typography.html` | Headings, lead, body, small, fine print, eyebrow, prose, lists, quotes, code |
+| `atoms/media.html` | Responsive/fixed-ratio images, avatar, logo, icons, video/audio, figure, thumbnails, before/after |
+| `atoms/feedback.html` | Badge, tag, chip, status dot, spinner, progress, skeleton, inline status text |
+| `atoms/layout-primitives.html` | Container, section, stack, cluster, grid, sidebar, split, divider, scroll area, sr-only, skip link, focus ring |
+
+Atoms not yet buildable are tracked in the manifest as `needs-css`, `needs-js`, or `deferred` with reasons.
+
 ## Patterns
+
+`patterns/` predates the atom layer — these are Phase 1 composition examples (molecule/organism level). They stay until the molecule/organism layers formally replace them.
 
 | File | Contents |
 |---|---|

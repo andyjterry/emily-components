@@ -1,0 +1,73 @@
+<!-- emily-components/atoms: layout primitives
+     Classes: .width-container, .section(-sm/-lg), .grid-auto(-sm/-lg), .equal-columns,
+     .stack(-sm/-lg/-xl), .cluster(-start/-between/-end), .sidebar, .split, .divider,
+     .scroll-area, .sr-only, .skip-link, .focus-ring, aspect-* utilities.
+     Spacing comes from --space-* tokens; no fixed pixel gaps in markup. -->
+
+<!-- Container: constrained width, responsive padding -->
+<div class="width-container">
+  <p>Page content lives inside a width container.</p>
+</div>
+
+<!-- Section rhythm -->
+<section class="section-sm"><p>Compact section</p></section>
+<section class="section"><p>Default section</p></section>
+<section class="section-lg"><p>Spacious section (heroes)</p></section>
+
+<!-- Stack: vertical rhythm without margin chains -->
+<div class="stack">
+  <p>First block</p>
+  <p>Second block</p>
+</div>
+
+<!-- Cluster: wrapping horizontal groups -->
+<div class="cluster-between">
+  <span>Left content</span>
+  <span>Right content</span>
+</div>
+
+<!-- Grid: responsive card grids with no media queries in markup -->
+<div class="grid-auto">
+  <div class="card">Cell one</div>
+  <div class="card">Cell two</div>
+  <div class="card">Cell three</div>
+</div>
+
+<!-- Sidebar: content + aside that wraps sensibly -->
+<div class="sidebar">
+  <nav aria-label="Section">Sidebar navigation</nav>
+  <div>Main content area</div>
+</div>
+
+<!-- Split: asymmetric two columns, collapses under 768px -->
+<div class="split">
+  <div>Primary column</div>
+  <aside>Secondary column</aside>
+</div>
+
+<!-- Divider -->
+<hr class="divider">
+
+<!-- Spacer: use spacing utilities, not empty elements -->
+<div class="mt-8">Content pushed down by a margin utility.</div>
+
+<!-- Aspect-ratio wrapper -->
+<div class="aspect-video" style="background-color: var(--color-surface-raised)">16:9 reserved box</div>
+
+<!-- Scroll area: keyboard-scrollable, labelled -->
+<div class="scroll-area" tabindex="0" role="region" aria-label="Price comparison table">
+  <table style="min-width: 40rem">
+    <caption class="sr-only">Price comparison</caption>
+    <thead><tr><th scope="col">Item</th><th scope="col">Standard</th><th scope="col">Premium</th></tr></thead>
+    <tbody><tr><td>Placeholder row</td><td>—</td><td>—</td></tr></tbody>
+  </table>
+</div>
+
+<!-- Visually hidden: text for AT only -->
+<a href="/basket">Basket <span class="sr-only">(3 items)</span></a>
+
+<!-- Skip link: first focusable element on every page -->
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- Focus ring utility for custom interactive elements -->
+<a class="focus-ring" href="/example">Element with token-driven focus ring</a>

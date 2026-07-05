@@ -1,0 +1,57 @@
+<!-- emily-components/atoms: feedback
+     Classes: .badge, .tag, .chip, .status-dot(-success/-warning/-error/-info),
+     .spinner, .progress, .skeleton, .inline-error/-success/-warning/-info.
+     All colours come from role tokens (--color-success, --color-error, …).
+     Status is never colour-only: every dot/spinner pairs with text.
+     Not yet built: tooltip (needs-js), toast (needs-js). See component-manifest.json. -->
+
+<!-- Badge: pill, bordered — proof points, counts -->
+<span class="badge">Fully insured</span>
+<span class="badge">12-month guarantee</span>
+
+<!-- Tag: square-cornered, subtle — categorisation, metadata -->
+<span class="tag">Plumbing</span>
+<span class="tag">Emergency</span>
+
+<!-- Chip: pill with a dismiss control (removal wiring is consumer JS) -->
+<span class="chip">
+  Boiler repair
+  <button class="btn-icon" type="button" style="all: unset; cursor: pointer; line-height: 1" aria-label="Remove filter: boiler repair">&times;</button>
+</span>
+
+<!-- Status dot: decorative — the text carries the status -->
+<p class="cluster" style="gap: 0.5rem">
+  <span class="status-dot status-dot-success" aria-hidden="true"></span> Available now
+</p>
+<p class="cluster" style="gap: 0.5rem">
+  <span class="status-dot status-dot-warning" aria-hidden="true"></span> Limited availability
+</p>
+<p class="cluster" style="gap: 0.5rem">
+  <span class="status-dot status-dot-error" aria-hidden="true"></span> Fully booked
+</p>
+<p class="cluster" style="gap: 0.5rem">
+  <span class="status-dot status-dot-info" aria-hidden="true"></span> New service
+</p>
+
+<!-- Spinner: role="status" announces once; text can be visible or sr-only -->
+<span role="status">
+  <span class="spinner" aria-hidden="true"></span>
+  <span class="sr-only">Loading…</span>
+</span>
+
+<!-- Progress: native element, labelled, value announced by AT -->
+<label for="ex-upload-progress">Uploading photos</label>
+<progress class="progress" id="ex-upload-progress" max="100" value="60">60%</progress>
+
+<!-- Skeleton: hidden from AT; announce loading via one live region instead -->
+<div aria-hidden="true" class="stack-sm">
+  <span class="skeleton" style="width: 40%; height: 1.5rem"></span>
+  <span class="skeleton" style="width: 100%"></span>
+  <span class="skeleton" style="width: 80%"></span>
+</div>
+
+<!-- Inline status text: link to the control via aria-describedby in forms -->
+<span class="inline-error">Enter your email address</span>
+<span class="inline-success">Saved</span>
+<span class="inline-warning">This slot is nearly full</span>
+<span class="inline-info">We only use this to reply to you</span>
