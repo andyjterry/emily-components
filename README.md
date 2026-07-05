@@ -153,6 +153,17 @@ Rules:
 - Meaningful images get real alt text; decorative images get `alt=""`; fixed-ratio images use `aspect-*` classes (and `width`/`height` where no ratio class applies) to avoid layout shift.
 - If an Unsplash API integration is ever added, it must handle attribution and download-tracking requirements properly — not a v1 concern.
 
+## Docs
+
+`docs/` is the internal catalogue — plain markdown, no site, no dependencies:
+
+- `docs/catalogue.md` — layer overview, usage and agent guidance (start here)
+- `docs/manifest-guide.md` — manifest schema and honesty rules
+- `docs/build-status.md` — generated status tables (`node docs/generate-build-status.js`)
+- `docs/accessibility-status.md` — what's under review and why
+- `docs/starter-selection-guide.md` — which starter to pick
+- `docs/branching-init-spec.md` — future guided init (spec only)
+
 ## Relationship to the rest of Emily UI
 
 ```text
