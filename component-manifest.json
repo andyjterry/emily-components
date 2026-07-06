@@ -1,7 +1,7 @@
 {
   "name": "Emily UI component manifest",
   "description": "Exhaustive map of the Emily UI system across all layers. Source of truth for what exists, what is planned, and what is blocked. Implementation is phased: tokens/ions -> manifest -> atoms -> molecules -> organisms -> templates -> pages/starters -> catalogue.",
-  "lastUpdated": "2026-07-05",
+  "lastUpdated": "2026-07-06",
   "layers": [
     "token",
     "atom",
@@ -25,16 +25,14 @@
     },
     "atom": {
       "total": 105,
-      "built": 94,
+      "built": 98,
       "planned": 1,
       "needs-js": 5,
-      "needs-css": 4,
       "deferred": 1
     },
     "molecule": {
       "total": 42,
-      "built": 34,
-      "needs-css": 1,
+      "built": 35,
       "needs-js": 7
     },
     "organism": {
@@ -766,39 +764,53 @@
       "name": "Toggle/switch",
       "layer": "atom",
       "category": "inputs",
-      "status": "needs-css",
+      "status": "built",
       "dependencies": [],
       "variants": [],
-      "states": [],
-      "accessibilityNotes": "No .switch class yet. Needs styled track/thumb on a real checkbox with role=\"switch\" review before shipping.",
-      "filePath": "",
-      "examplesPath": ""
+      "states": [
+        "focus",
+        "checked",
+        "disabled"
+      ],
+      "accessibilityNotes": "Static WCAG 2.2 code review passed: native checkbox with role=\"switch\", associated visible label, keyboard-native operation, visible focus ring, state conveyed by thumb position and colour, disabled state perceivable, reduced-motion respected, no JS required. No manual AT testing performed.",
+      "filePath": "emily-css/src/generators/patterns.js",
+      "examplesPath": "emily-components/atoms/inputs.html"
     },
     {
       "id": "atom-inputs-file-upload",
       "name": "File upload",
       "layer": "atom",
       "category": "inputs",
-      "status": "needs-css",
+      "status": "built",
       "dependencies": [],
       "variants": [],
-      "states": [],
-      "accessibilityNotes": "Native input[type=\"file\"] works unstyled; no token-first file trigger styling yet.",
-      "filePath": "",
-      "examplesPath": ""
+      "states": [
+        "focus",
+        "hover",
+        "disabled"
+      ],
+      "accessibilityNotes": "Static WCAG 2.2 code review passed: native input[type=\"file\"] styled via ::file-selector-button, associated visible label, keyboard-native operation, visible focus, disabled state perceivable, no JS required. No manual AT testing performed.",
+      "filePath": "emily-css/src/generators/patterns.js",
+      "examplesPath": "emily-components/atoms/inputs.html"
     },
     {
       "id": "atom-inputs-image-upload",
       "name": "Image upload",
       "layer": "atom",
       "category": "inputs",
-      "status": "needs-css",
-      "dependencies": [],
+      "status": "built",
+      "dependencies": [
+        "atom-inputs-file-upload"
+      ],
       "variants": [],
-      "states": [],
-      "accessibilityNotes": "Same as file upload plus accept=\"image/*\". Preview version is a molecule.",
-      "filePath": "",
-      "examplesPath": ""
+      "states": [
+        "focus",
+        "hover",
+        "disabled"
+      ],
+      "accessibilityNotes": "Static WCAG 2.2 code review passed: native input[type=\"file\"] with accept=\"image/*\", associated visible label and helper text, keyboard-native operation, visible focus, no JS required. Preview version is a separate needs-js molecule. No manual AT testing performed.",
+      "filePath": "emily-css/src/generators/patterns.js",
+      "examplesPath": "emily-components/atoms/inputs.html"
     },
     {
       "id": "atom-inputs-drag-and-drop-upload",
@@ -818,13 +830,16 @@
       "name": "Range slider",
       "layer": "atom",
       "category": "inputs",
-      "status": "needs-css",
+      "status": "built",
       "dependencies": [],
       "variants": [],
-      "states": [],
-      "accessibilityNotes": "Native input[type=\"range\"] functional; brand styling of track/thumb not yet generated.",
-      "filePath": "",
-      "examplesPath": ""
+      "states": [
+        "focus",
+        "disabled"
+      ],
+      "accessibilityNotes": "Static WCAG 2.2 code review passed: native input[type=\"range\"] with min/max/step/value, associated visible label, keyboard-native operation, visible focus-visible ring, disabled state perceivable, no JS required. Live value output requires JS and is out of scope. No manual AT testing performed.",
+      "filePath": "emily-css/src/generators/patterns.js",
+      "examplesPath": "emily-components/atoms/inputs.html"
     },
     {
       "id": "atom-inputs-colour-picker",
@@ -1797,15 +1812,19 @@
       "name": "Toggle row",
       "layer": "molecule",
       "category": "form-molecules",
-      "status": "needs-css",
+      "status": "built",
       "dependencies": [
         "atom-inputs-toggle-switch"
       ],
       "variants": [],
-      "states": [],
-      "accessibilityNotes": "Blocked on the switch atom.",
-      "filePath": "",
-      "examplesPath": ""
+      "states": [
+        "focus",
+        "checked",
+        "disabled"
+      ],
+      "accessibilityNotes": "Static WCAG 2.2 code review passed: composes the switch atom with visible label and aria-describedby help text, keyboard-native operation, no JS required. No manual AT testing performed.",
+      "filePath": "emily-css/src/generators/patterns.js",
+      "examplesPath": "emily-components/molecules/forms.html"
     },
     {
       "id": "molecule-form-molecules-search-bar",

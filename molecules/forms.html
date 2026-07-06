@@ -1,7 +1,7 @@
 <!-- emily-components/molecules: forms
      Compositions of input/button/feedback atoms. All molecules here are plain HTML —
      no JavaScript. Labels always associated; hints/errors linked via aria-describedby.
-     Not built at this layer: toggle row (needs-css: switch atom), address lookup row,
+     Not built at this layer: address lookup row,
      file/image upload with preview (needs-js), multi-step progress (needs-a11y-review). -->
 
 <!-- Form field: label + hint + input + error (the canonical field molecule) -->
@@ -70,6 +70,16 @@
 <div class="checkbox-group">
   <input class="checkbox" id="mf-consent" name="consent" type="checkbox" required>
   <label for="mf-consent">I agree to the <a class="text-brand-80 underline" href="/privacy">privacy policy</a></label>
+</div>
+
+<!-- Toggle row: switch atom + label + help text. No JS — state is the native
+     checked state. Help text linked via aria-describedby. -->
+<div class="checkbox-group">
+  <input class="switch" id="mf-marketing" name="marketing" type="checkbox" role="switch" aria-describedby="mf-marketing-hint">
+  <div>
+    <label for="mf-marketing">Marketing emails</label>
+    <p class="form-hint" id="mf-marketing-hint">Occasional product updates. Unsubscribe any time.</p>
+  </div>
 </div>
 
 <!-- Search bar: form + labelled search input + submit -->

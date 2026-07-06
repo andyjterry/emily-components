@@ -1,6 +1,6 @@
 # Emily UI Build Status
 
-**Last Updated:** 2026-07-05
+**Last Updated:** 2026-07-06
 **Generated from `component-manifest.json` — do not edit by hand.** Regenerate with:
 
 ```bash
@@ -12,8 +12,8 @@ node docs/generate-build-status.js
 | Layer | Total | built | planned | needs-css | needs-js | needs-a11y-review | deferred |
 |---|---|---|---|---|---|---|---|
 | token | 10 | 10 | 0 | 0 | 0 | 0 | 0 |
-| atom | 105 | 94 | 1 | 4 | 5 | 0 | 1 |
-| molecule | 42 | 34 | 0 | 1 | 7 | 0 | 0 |
+| atom | 105 | 98 | 1 | 0 | 5 | 0 | 1 |
+| molecule | 42 | 35 | 0 | 0 | 7 | 0 | 0 |
 | organism | 100 | 80 | 3 | 0 | 9 | 4 | 4 |
 | template | 32 | 30 | 1 | 0 | 0 | 1 | 0 |
 | page | 14 | 6 | 8 | 0 | 0 | 0 | 0 |
@@ -33,7 +33,7 @@ node docs/generate-build-status.js
 | Focus ring tokens | tokens | — |
 | Transition tokens | tokens | — |
 
-## Built: atoms (94)
+## Built: atoms (98)
 
 | Name | Category | Example |
 |---|---|---|
@@ -70,6 +70,10 @@ node docs/generate-build-status.js
 | Multi-select | inputs | `emily-components/atoms/inputs.html` |
 | Checkbox | inputs | `emily-components/atoms/inputs.html` |
 | Radio | inputs | `emily-components/atoms/inputs.html` |
+| Toggle/switch | inputs | `emily-components/atoms/inputs.html` |
+| File upload | inputs | `emily-components/atoms/inputs.html` |
+| Image upload | inputs | `emily-components/atoms/inputs.html` |
+| Range slider | inputs | `emily-components/atoms/inputs.html` |
 | Colour picker | inputs | `emily-components/atoms/inputs.html` |
 | Hidden honeypot field | inputs | `emily-components/atoms/inputs.html` |
 | H1 | typography | `emily-components/atoms/typography.html` |
@@ -132,7 +136,7 @@ node docs/generate-build-status.js
 | Skip link | layout-primitives | `emily-components/atoms/layout-primitives.html` |
 | Focus ring style | layout-primitives | `emily-components/atoms/layout-primitives.html` |
 
-## Built: molecules (34)
+## Built: molecules (35)
 
 | Name | Category | Example |
 |---|---|---|
@@ -142,6 +146,7 @@ node docs/generate-build-status.js
 | Fieldset with legend | form-molecules | `emily-components/molecules/forms.html` |
 | Radio group | form-molecules | `emily-components/molecules/forms.html` |
 | Checkbox group | form-molecules | `emily-components/molecules/forms.html` |
+| Toggle row | form-molecules | `emily-components/molecules/forms.html` |
 | Search bar | form-molecules | `emily-components/molecules/forms.html` |
 | Consent checkbox | form-molecules | `emily-components/molecules/forms.html` |
 | Validation summary | form-molecules | `emily-components/molecules/forms.html` |
@@ -303,16 +308,6 @@ node docs/generate-build-status.js
 | Charity/community organisation starter | starters | `emily-starters/charity-community/index.html` |
 
 ## Blocked items, grouped by reason
-
-### needs-css (5)
-
-| Name | Layer | Why |
-|---|---|---|
-| Toggle/switch | atom | No .switch class yet. Needs styled track/thumb on a real checkbox with role="switch" review before shipping. |
-| File upload | atom | Native input[type="file"] works unstyled; no token-first file trigger styling yet. |
-| Image upload | atom | Same as file upload plus accept="image/*". Preview version is a molecule. |
-| Range slider | atom | Native input[type="range"] functional; brand styling of track/thumb not yet generated. |
-| Toggle row | molecule | Blocked on the switch atom. |
 
 ### needs-js (21)
 

@@ -1,10 +1,10 @@
 <!-- emily-components/atoms: inputs
-     Classes: .input, .select, .textarea, .checkbox, .radio (emily-css @layer components).
+     Classes: .input, .select, .textarea, .checkbox, .radio, .switch, .input-file,
+     .range (emily-css @layer components).
      Every control pairs with a visible <label>. Error state = aria-invalid="true"
      plus .inline-error text linked via aria-describedby.
-     Not yet built: toggle/switch (needs-css), styled file upload (needs-css),
-     range slider styling (needs-css), address lookup (needs-js),
-     drag-and-drop upload (needs-js), quantity stepper (needs-js). See component-manifest.json. -->
+     Not yet built: address lookup (needs-js), drag-and-drop upload (needs-js),
+     quantity stepper (needs-js). See component-manifest.json. -->
 
 <!-- Text -->
 <label for="ex-name">Full name</label>
@@ -92,6 +92,38 @@
   <input class="radio" id="ex-contact-phone" name="contact" type="radio" value="phone">
   <label for="ex-contact-phone">Contact me by phone</label>
 </div>
+
+<!-- Toggle/switch: real checkbox styled as a switch. State comes from the native
+     checked state (thumb position + colour), keyboard operation is native.
+     role="switch" announces on/off rather than checked/unchecked. -->
+<div class="checkbox-group">
+  <input class="switch" id="ex-notifications" name="notifications" type="checkbox" role="switch">
+  <label for="ex-notifications">Email notifications</label>
+</div>
+
+<!-- Switch, checked + disabled: state stays perceivable when disabled -->
+<div class="checkbox-group">
+  <input class="switch" id="ex-2fa" name="2fa" type="checkbox" role="switch" checked disabled>
+  <label for="ex-2fa">Two-factor authentication (managed by your organisation)</label>
+</div>
+
+<!-- File upload: native input, styled trigger via ::file-selector-button.
+     No fake button wrapping — the input itself is the target. -->
+<label for="ex-cv">Upload your CV</label>
+<p class="form-hint" id="ex-cv-hint">PDF or Word document, up to 5MB.</p>
+<input class="input-file" id="ex-cv" name="cv" type="file" accept=".pdf,.doc,.docx" aria-describedby="ex-cv-hint">
+
+<!-- Image upload: file input scoped to images. Preview requires JS and is a
+     separate needs-js molecule — do not imply it here. -->
+<label for="ex-photo">Profile photo</label>
+<p class="form-hint" id="ex-photo-hint">JPEG or PNG. A square image works best.</p>
+<input class="input-file" id="ex-photo" name="photo" type="file" accept="image/*" aria-describedby="ex-photo-hint">
+
+<!-- Range: native slider. Static output text states the current value;
+     live updates on input require JS. -->
+<label for="ex-budget-range">Maximum budget</label>
+<input class="range" id="ex-budget-range" name="budget-range" type="range" min="0" max="1000" step="50" value="500" aria-describedby="ex-budget-range-value">
+<p class="form-hint" id="ex-budget-range-value">Currently &pound;500</p>
 
 <!-- Error state: aria-invalid drives the border, aria-describedby links the message -->
 <label for="ex-bad-email">Email address</label>
