@@ -1,0 +1,40 @@
+{
+  "name": "@emilyui/components",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Framework-agnostic HTML component patterns for EmilyCSS, with a machine-readable component manifest as the source of truth.",
+  "license": "MIT",
+  "author": "Andy Terry",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyjterry/emily-components.git"
+  },
+  "homepage": "https://emilyui.com/components",
+  "keywords": [
+    "emilyui",
+    "emily-css",
+    "components",
+    "html",
+    "design-system",
+    "accessibility"
+  ],
+  "files": [
+    "component-manifest.json",
+    "atoms/",
+    "molecules/",
+    "organisms/",
+    "templates/",
+    "patterns/",
+    "docs/build-status.md",
+    "docs/manifest-guide.md",
+    "docs/starter-selection-guide.md"
+  ],
+  "exports": {
+    ".": "./component-manifest.json",
+    "./manifest": "./component-manifest.json",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build-status": "node docs/generate-build-status.js"
+  }
+}

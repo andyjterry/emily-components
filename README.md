@@ -41,6 +41,20 @@ Brandbadger is the first consumer of this system, not its owner. Nothing in here
 2. Run `emily-css build` and link the generated stylesheet.
 3. Copy a pattern from `patterns/` and replace the placeholder content.
 
+## Packaging
+
+This repo is prepared as the future `@emilyui/components` npm package but is **not published**
+(`"private": true` guards against accidental publish until a consumer exists).
+
+- Planned install: `npm install @emilyui/components`
+- Package payload: `component-manifest.json` plus the HTML example layers (`atoms/`, `molecules/`,
+  `organisms/`, `templates/`, `patterns/`) and the public docs (`build-status`, `manifest-guide`,
+  `starter-selection-guide`). Internal specs and generators stay out of the tarball via the
+  `files` whitelist.
+- Tooling entry point: `require('@emilyui/components')` (or `/manifest`) resolves to
+  `component-manifest.json` — the machine-readable source of truth a future `emilyui init`
+  will read to offer only `built` entries.
+
 ## Token contract
 
 Patterns consume **semantic role tokens**, not raw palette steps. `emily-css` generates these in `@layer theme`, mapped from your configured colours:
